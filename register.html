@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | RudraBitez</title>
+  <meta name="description" content="Create a RudraBitez account for direct ordering, bulk enquiries, and distributor onboarding.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth-page">
+    <div class="container auth-grid">
+      <section class="auth-side">
+        <div class="auth-copy">
+          <a class="brand" href="index.html" aria-label="Back to RudraBitez home">
+            <span class="brand-mark">RB</span>
+            <span>RudraBitez</span>
+          </a>
+          <span class="eyebrow" style="margin-top:28px;">Create your account</span>
+          <h1 style="margin-top:18px;">Register for direct orders, wholesale enquiries, and brand access.</h1>
+          <p style="margin-top:18px;">This page is designed as a premium registration experience so customers, retailers, and distributors can all start from one clear touchpoint.</p>
+          <div class="badge-row" style="margin-top:24px;">
+            <span class="mini-badge">Customer orders</span>
+            <span class="mini-badge">Distributor leads</span>
+            <span class="mini-badge">Bulk requests</span>
+          </div>
+        </div>
+        <img class="auth-pack" src="assets/banana-mockup-page-1.png" alt="RudraBitez Royal Yellow Banana Chips front pack">
+      </section>
+
+      <section class="auth-card">
+        <span class="eyebrow">Get started</span>
+        <h1 style="margin-top:18px;">Register</h1>
+        <p>Use this as your main sign-up page for end customers now, or connect it later to a CRM, order system, or partner onboarding workflow.</p>
+        <form class="form-grid">
+          <div class="form-row">
+            <label class="field">
+              First name
+              <input type="text" name="first_name" placeholder="First name">
+            </label>
+            <label class="field">
+              Last name
+              <input type="text" name="last_name" placeholder="Last name">
+            </label>
+          </div>
+          <label class="field">
+            Email address
+            <input type="email" name="email" placeholder="you@example.com">
+          </label>
+          <div class="form-row">
+            <label class="field">
+              Mobile number
+              <input type="tel" name="phone" placeholder="+91">
+            </label>
+            <label class="field">
+              Account type
+              <select name="account_type">
+                <option>Customer</option>
+                <option>Retail buyer</option>
+                <option>Distributor</option>
+                <option>Bulk enquiry</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="field">
+              Password
+              <input type="password" name="password" placeholder="Create password">
+            </label>
+            <label class="field">
+              Confirm password
+              <input type="password" name="confirm_password" placeholder="Confirm password">
+            </label>
+          </div>
+          <label class="field">
+            Notes
+            <textarea name="notes" placeholder="Optional message for bulk or distributor enquiry"></textarea>
+          </label>
+          <label class="checkbox-row">
+            <input type="checkbox" name="terms">
+            <span>I agree to be contacted by RudraBitez regarding orders, product updates, and partnership enquiries.</span>
+          </label>
+          <button class="button" type="submit">Create Account</button>
+        </form>
+        <div class="auth-alt">
+          <span>Already registered?</span>
+          <a href="signin.html" style="font-weight:800; color:var(--rust);">Sign in here</a>
+        </div>
+        <div class="auth-alt">
+          <a href="index.html" style="font-weight:800;">Back to Home</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
