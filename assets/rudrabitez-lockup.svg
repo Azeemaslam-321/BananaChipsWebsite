@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 150" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="20" y1="20" x2="410" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff9c8"/>
+      <stop offset="0.24" stop-color="#fff084"/>
+      <stop offset="0.58" stop-color="#ffd93d"/>
+      <stop offset="1" stop-color="#dc9000"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="28" y1="16" x2="392" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffde8"/>
+      <stop offset="0.34" stop-color="#fff39a"/>
+      <stop offset="0.7" stop-color="#ffd95b"/>
+      <stop offset="1" stop-color="#f0b41b"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <path
+      fill-rule="evenodd"
+      d="M75 131c31.48 0 57-25.52 57-57S106.48 17 75 17 18 42.52 18 74s25.52 57 57 57ZM49 53a15 15 0 1 0 0-30 15 15 0 0 0 0 30Zm30-12a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm24 23a15 15 0 1 0 0-30 15 15 0 0 0 0 30Z"
+      fill="url(#gold)"
+      stroke="#271303"
+      stroke-width="5.2"
+      stroke-linejoin="round"
+    />
+    <path
+      fill-rule="evenodd"
+      d="M75 125c28.17 0 51-22.83 51-51S103.17 23 75 23 24 45.83 24 74s22.83 51 51 51ZM49 50a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm30-10a8.4 8.4 0 1 0 0-16.8A8.4 8.4 0 0 0 79 40Zm24 21a12 12 0 1 0 0-24 12 12 0 0 0 0 24Z"
+      fill="none"
+      stroke="#fff3a8"
+      stroke-width="2.8"
+      stroke-linejoin="round"
+    />
+    <ellipse cx="55" cy="41" rx="18" ry="15" fill="#fffef2" opacity=".56"/>
+    <circle cx="53" cy="97" r="6.2" fill="#5e2d06"/>
+    <circle cx="69" cy="90" r="7.6" fill="#6d3306"/>
+    <circle cx="97" cy="18" r="8.6" fill="url(#goldSoft)" stroke="#271303" stroke-width="3.4"/>
+    <circle cx="119" cy="35" r="6.8" fill="url(#goldSoft)" stroke="#271303" stroke-width="3"/>
+    <circle cx="132" cy="16" r="5.2" fill="url(#goldSoft)" stroke="#271303" stroke-width="2.6"/>
+  </g>
+
+  <g>
+    <text
+      x="152"
+      y="103"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="84"
+      font-weight="700"
+      fill="url(#gold)"
+      stroke="#271303"
+      stroke-width="8.8"
+      paint-order="stroke fill"
+      letter-spacing="-1.6"
+    >RudraBitez</text>
+    <text
+      x="152"
+      y="103"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="84"
+      font-weight="700"
+      fill="url(#goldSoft)"
+      opacity=".58"
+      letter-spacing="-1.6"
+    >RudraBitez</text>
+  </g>
+</svg>
