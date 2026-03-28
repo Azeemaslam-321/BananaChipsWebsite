@@ -6,11 +6,19 @@
   <title>Checkout | RudraBitez</title>
   <meta name="description" content="Checkout for RudraBitez Royal Yellow Banana Chips.">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="checkout.js" defer></script>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <div class="container nav">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <a class="brand" href="index.html" aria-label="RudraBitez home">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none">
@@ -21,7 +29,7 @@
           </span>
           <span class="brand-name">RudraBitez</span>
         </a>
-        <nav class="nav-links" aria-label="Primary navigation">
+        <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
           <a href="index.html#top">Home</a>
           <a href="index.html#products">Products</a>
           <a href="index.html#contact">Contact</a>
@@ -33,7 +41,7 @@
               <circle cx="12" cy="8" r="4"></circle>
             </svg>
           </a>
-          <a class="nav-icon" href="checkout.html" aria-label="Checkout">
+          <a class="nav-icon nav-icon-cart" href="checkout.html" aria-label="Checkout">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 7h12l-1 12H7L6 7Z"></path>
               <path d="M9 7a3 3 0 0 1 6 0"></path>
@@ -45,24 +53,31 @@
 
     <main class="checkout-shell">
       <div class="container">
-        <div class="section-head" style="margin-bottom:24px;">
+        <div class="section-head checkout-hero-head" style="margin-bottom:24px;">
           <div>
             <span class="eyebrow">Checkout</span>
-            <h1 style="margin-top:16px; font-size:clamp(2.4rem, 5vw, 4rem);">Complete your RudraBitez order.</h1>
+            <h1 style="margin-top:16px; font-size:clamp(2.4rem, 5vw, 4rem);">Finish your order with a cleaner, faster checkout.</h1>
           </div>
-          <p>Review your product, fill in delivery details, choose payment mode, and proceed to place the order.</p>
+          <p>Enter delivery details, review your pack quantity, and pay securely through Razorpay or confirm your order with WhatsApp support.</p>
         </div>
 
+        <div id="checkout-status" class="checkout-status" hidden aria-live="polite"></div>
+
         <div class="checkout-grid">
-          <section class="checkout-card">
+          <aside class="checkout-card checkout-summary-card">
+            <div class="checkout-summary-head">
+              <span class="pill pill-accent">Secure checkout</span>
+              <span class="pill">Ships from Mumbai</span>
+            </div>
+
             <div class="checkout-product">
               <div class="checkout-product-media">
                 <img src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips pack">
               </div>
               <div>
                 <span class="pill">Best Seller</span>
-                <h3 style="margin-top:16px;">Royal Yellow Banana Chips</h3>
-                <p style="margin-top:10px;">200g pack | Classic Salted | Premium pouch packaging</p>
+                <h3 style="margin-top:16px;">RudraBitez Royal Yellow Banana Chips</h3>
+                <p style="margin-top:10px;">200g premium pouch | Classic Salted | Fresh, crispy and hygienically packed</p>
                 <div class="price-line">
                   <span class="price-now">Rs. 249</span>
                   <span class="price-old">Rs. 299</span>
@@ -70,106 +85,214 @@
               </div>
             </div>
 
-            <div class="summary-list">
+            <div class="secure-strip">
+              <div class="secure-strip-item">
+                <strong>Gateway</strong>
+                <span>Razorpay Standard Checkout</span>
+              </div>
+              <div class="secure-strip-item">
+                <strong>Support</strong>
+                <a href="tel:+918591858021">+91 8591858021</a>
+              </div>
+            </div>
+
+            <div class="summary-list summary-list-pricing">
               <div class="summary-row">
-                <span>Product</span>
-                <strong>1 x Royal Yellow Banana Chips</strong>
+                <span>Unit price</span>
+                <strong id="summary-unit-price">Rs. 249</strong>
               </div>
               <div class="summary-row">
-                <span>Subtotal</span>
-                <strong>Rs. 249</strong>
+                <span>Quantity</span>
+                <strong id="summary-quantity">1 Pack</strong>
               </div>
               <div class="summary-row">
                 <span>Shipping</span>
-                <strong>To be confirmed</strong>
+                <strong id="summary-shipping">Included</strong>
               </div>
               <div class="summary-row">
-                <span>Support</span>
-                <strong><a href="tel:+918591858021">+91 8591858021</a></strong>
+                <span>Payment mode</span>
+                <strong id="summary-payment-mode">Pay Online</strong>
               </div>
-              <div class="summary-row">
-                <span>Total</span>
-                <strong>Rs. 249 + shipping</strong>
+              <div class="summary-row summary-row-total">
+                <span>Total payable</span>
+                <strong id="summary-total">Rs. 249</strong>
               </div>
             </div>
 
-            <div class="pill-row">
-              <span class="pill">Premium Quality</span>
-              <span class="pill">Hygienic Packaging</span>
-              <span class="pill">WhatsApp Support</span>
+            <div class="checkout-benefit-list">
+              <article class="checkout-benefit-item">
+                <strong>No preservatives</strong>
+                <span>Traditional taste with a cleaner ingredient profile.</span>
+              </article>
+              <article class="checkout-benefit-item">
+                <strong>Premium pouch presentation</strong>
+                <span>Ready for gifting, direct orders and marketplace fulfilment.</span>
+              </article>
+              <article class="checkout-benefit-item">
+                <strong>Direct brand support</strong>
+                <span>Need help before paying? Our team is available on call and WhatsApp.</span>
+              </article>
             </div>
-          </section>
 
-          <section class="checkout-card">
-            <span class="eyebrow">Delivery & Payment</span>
-            <form class="form-grid">
-              <div class="form-row">
-                <label class="field">
-                  First name
-                  <input type="text" name="first_name" placeholder="First name">
-                </label>
-                <label class="field">
-                  Last name
-                  <input type="text" name="last_name" placeholder="Last name">
-                </label>
-              </div>
+            <div class="checkout-support-note">
+              <strong>Need bulk ordering?</strong>
+              <p>Select <span>Bulk enquiry</span> in quantity and we will route you to WhatsApp with your filled details.</p>
+            </div>
+          </aside>
 
-              <div class="form-row">
-                <label class="field">
-                  Email address
-                  <input type="email" name="email" placeholder="you@example.com">
-                </label>
-                <label class="field">
-                  Phone number
-                  <input type="tel" name="phone" placeholder="+91">
-                </label>
-              </div>
+          <section class="checkout-card checkout-form-card">
+            <div class="checkout-card-head">
+              <span class="eyebrow">Delivery & Payment</span>
+              <h2 style="margin-top:16px;">Professional order details</h2>
+              <p class="checkout-copy">This form is ready for Razorpay online payments on PHP hosting and keeps Cash on Delivery or assisted WhatsApp ordering available as backup options.</p>
+            </div>
 
-              <label class="field">
-                Delivery address
-                <textarea name="address" placeholder="House no, street, area, city, pin code"></textarea>
-              </label>
+            <form id="checkout-form" class="form-grid checkout-form" data-unit-price="249" novalidate>
+              <section class="form-section">
+                <div class="form-section-head">
+                  <span class="form-step">01</span>
+                  <div>
+                    <h3>Customer information</h3>
+                    <p>Use the customer mobile number that should receive payment and delivery updates.</p>
+                  </div>
+                </div>
 
-              <div class="form-row">
-                <label class="field">
-                  Quantity
-                  <select name="quantity">
-                    <option>1 Pack</option>
-                    <option>2 Packs</option>
-                    <option>3 Packs</option>
-                    <option>5 Packs</option>
-                    <option>Bulk enquiry</option>
-                  </select>
-                </label>
-                <label class="field">
-                  Delivery note
-                  <input type="text" name="note" placeholder="Optional note">
-                </label>
-              </div>
-
-              <div>
-                <strong>Choose payment mode</strong>
-                <div class="payment-list">
-                  <label class="payment-item">
-                    <input type="radio" name="payment" checked>
-                    <span>Cash on Delivery</span>
+                <div class="form-row checkout-two-col">
+                  <label class="field">
+                    First name
+                    <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" maxlength="30" required>
                   </label>
-                  <label class="payment-item">
-                    <input type="radio" name="payment">
-                    <span>UPI / QR Payment</span>
-                  </label>
-                  <label class="payment-item">
-                    <input type="radio" name="payment">
-                    <span>WhatsApp confirmation before payment</span>
+                  <label class="field">
+                    Last name
+                    <input type="text" name="last_name" placeholder="Last name" autocomplete="family-name" maxlength="30" required>
                   </label>
                 </div>
+
+                <div class="form-row checkout-two-col">
+                  <label class="field">
+                    Email address
+                    <input type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="80" required>
+                  </label>
+                  <label class="field">
+                    Phone number
+                    <input type="tel" name="phone" placeholder="+91 98xxxxxxx" autocomplete="tel" inputmode="tel" maxlength="16" required>
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-section">
+                <div class="form-section-head">
+                  <span class="form-step">02</span>
+                  <div>
+                    <h3>Delivery address</h3>
+                    <p>Keep the address complete so the same details can be reused for payment verification or WhatsApp order confirmation.</p>
+                  </div>
+                </div>
+
+                <label class="field">
+                  Street address
+                  <textarea name="address" placeholder="House no, street, area, landmark" autocomplete="street-address" maxlength="180" required></textarea>
+                </label>
+
+                <div class="form-row checkout-three-col">
+                  <label class="field">
+                    City
+                    <input type="text" name="city" placeholder="Mumbai" autocomplete="address-level2" maxlength="40" required>
+                  </label>
+                  <label class="field">
+                    State
+                    <input type="text" name="state" placeholder="Maharashtra" autocomplete="address-level1" maxlength="40" required>
+                  </label>
+                  <label class="field">
+                    PIN code
+                    <input type="text" name="pincode" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="400001" required>
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-section">
+                <div class="form-section-head">
+                  <span class="form-step">03</span>
+                  <div>
+                    <h3>Order preferences</h3>
+                    <p>Pick your pack count and add anything our team should know before dispatch.</p>
+                  </div>
+                </div>
+
+                <div class="form-row checkout-two-col">
+                  <label class="field">
+                    Quantity
+                    <select id="checkout-quantity" name="quantity" required>
+                      <option value="1">1 Pack</option>
+                      <option value="2">2 Packs</option>
+                      <option value="3">3 Packs</option>
+                      <option value="5">5 Packs</option>
+                      <option value="bulk">Bulk enquiry</option>
+                    </select>
+                  </label>
+                  <label class="field">
+                    Delivery note
+                    <input type="text" name="note" placeholder="Optional note for the RudraBitez team" maxlength="160">
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-section">
+                <div class="form-section-head">
+                  <span class="form-step">04</span>
+                  <div>
+                    <h3>Choose payment mode</h3>
+                    <p>Pay online with Razorpay, confirm a COD request, or switch to assisted WhatsApp checkout.</p>
+                  </div>
+                </div>
+
+                <div class="payment-choice-list">
+                  <label class="payment-option">
+                    <input type="radio" name="payment_mode" value="online" checked>
+                    <span class="payment-option-copy">
+                      <strong>Pay Online</strong>
+                      <small>UPI, cards, netbanking and wallets using Razorpay.</small>
+                    </span>
+                    <span class="payment-badge">Recommended</span>
+                  </label>
+
+                  <label class="payment-option">
+                    <input type="radio" name="payment_mode" value="cod">
+                    <span class="payment-option-copy">
+                      <strong>Cash on Delivery</strong>
+                      <small>Share the order details first and confirm delivery support manually.</small>
+                    </span>
+                  </label>
+
+                  <label class="payment-option">
+                    <input type="radio" name="payment_mode" value="whatsapp">
+                    <span class="payment-option-copy">
+                      <strong>WhatsApp Assistance</strong>
+                      <small>Continue your order with direct support from the RudraBitez team.</small>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-error group-error" data-error-for="payment_mode" aria-live="polite"></div>
+              </section>
+
+              <label class="checkbox-row checkout-consent">
+                <input type="checkbox" name="consent" required>
+                <span>I confirm that the customer and delivery details are correct for payment, dispatch and support follow-up.</span>
+              </label>
+              <div class="field-error group-error" data-error-for="consent" aria-live="polite"></div>
+
+              <div class="checkout-actions">
+                <button class="button" id="checkout-submit" type="submit">Pay Rs. 249 Securely</button>
+                <a class="button-outline" id="whatsapp-checkout" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20complete%20my%20banana%20chips%20checkout." target="_blank" rel="noreferrer">Order on WhatsApp</a>
               </div>
 
-              <button class="button" type="submit">Place Order</button>
-              <a class="button-outline" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20complete%20my%20banana%20chips%20checkout." target="_blank" rel="noreferrer">Checkout on WhatsApp</a>
+              <p class="checkout-disclaimer">Razorpay opens in a secure checkout modal. Cash on Delivery and bulk enquiry requests are routed through WhatsApp with your filled order summary.</p>
             </form>
 
-            <p style="margin-top:16px;">This is a front-end checkout flow. Connect it to your payment gateway, order backend, or WhatsApp automation when you are ready.</p>
+            <div class="checkout-mini-note">
+              <strong>Accepted online payment methods</strong>
+              <span>UPI, cards, netbanking and supported wallets through Razorpay Standard Checkout.</span>
+            </div>
           </section>
         </div>
       </div>
@@ -189,7 +312,7 @@
               </span>
               <span class="brand-name">RudraBitez</span>
             </div>
-            <p style="margin-top:18px;max-width:58ch;">Premium Royal Yellow Banana Chips with a cleaner brand experience, direct support, and a checkout flow ready for backend integration whenever you want it.</p>
+            <p style="margin-top:18px;max-width:58ch;">Premium Royal Yellow Banana Chips with a cleaner brand experience, direct support, and a secure checkout flow prepared for Razorpay-enabled ordering.</p>
             <div class="social-icons">
               <a class="social-icon" href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                 <svg viewBox="0 0 24 24" fill="currentColor">

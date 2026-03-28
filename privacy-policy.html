@@ -6,11 +6,17 @@
   <title>Privacy Policy | RudraBitez</title>
   <meta name="description" content="Privacy Policy for RudraBitez.">
   <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <div class="container nav">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <a class="brand" href="index.html" aria-label="RudraBitez home">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none">
@@ -21,7 +27,7 @@
           </span>
           <span class="brand-name">RudraBitez</span>
         </a>
-        <nav class="nav-links" aria-label="Primary navigation">
+        <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
           <a href="index.html#top">Home</a>
           <a href="index.html#products">Products</a>
           <a href="index.html#contact">Contact</a>
@@ -33,7 +39,7 @@
               <circle cx="12" cy="8" r="4"></circle>
             </svg>
           </a>
-          <a class="nav-icon" href="checkout.html" aria-label="Checkout">
+          <a class="nav-icon nav-icon-cart" href="checkout.html" aria-label="Checkout">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 7h12l-1 12H7L6 7Z"></path>
               <path d="M9 7a3 3 0 0 1 6 0"></path>
