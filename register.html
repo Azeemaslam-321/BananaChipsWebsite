@@ -4,93 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register | RudraBitez</title>
-  <meta name="description" content="Create a RudraBitez account for direct ordering, bulk enquiries, and distributor onboarding.">
+  <meta name="description" content="Create your RudraBitez account for quicker checkout, saved delivery details, and premium snack ordering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth-pages.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
+  <script src="auth.js" defer></script>
 </head>
-<body>
-  <main class="auth-page">
-    <div class="container auth-grid">
-      <section class="auth-side">
-        <div class="auth-copy">
-          <a class="brand" href="index.html" aria-label="Back to RudraBitez home">
-            <span class="brand-mark">RB</span>
-            <span class="brand-name">RudraBitez</span>
-          </a>
-          <span class="eyebrow" style="margin-top:28px;">Create your account</span>
-          <h1 style="margin-top:18px;">Register for direct orders, wholesale enquiries, and brand access.</h1>
-          <p style="margin-top:18px;">This page is designed as a premium registration experience so customers, retailers, and distributors can all start from one clear touchpoint.</p>
-          <div class="badge-row" style="margin-top:24px;">
-            <span class="mini-badge">Customer orders</span>
-            <span class="mini-badge">Distributor leads</span>
-            <span class="mini-badge">Bulk requests</span>
-          </div>
-        </div>
-        <img class="auth-pack" src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips front pack">
-      </section>
+<body class="authplus-body">
+  <div class="authplus-page-glow authplus-page-glow-left"></div>
+  <div class="authplus-page-glow authplus-page-glow-right"></div>
 
-      <section class="auth-card">
-        <span class="eyebrow">Get started</span>
-        <h1 style="margin-top:18px;">Register</h1>
-        <p>Use this as your main sign-up page for end customers now, or connect it later to a CRM, order system, or partner onboarding workflow.</p>
-        <form class="form-grid">
-          <div class="form-row">
-            <label class="field">
-              First name
-              <input type="text" name="first_name" placeholder="First name">
-            </label>
-            <label class="field">
-              Last name
-              <input type="text" name="last_name" placeholder="Last name">
-            </label>
-          </div>
-          <label class="field">
-            Email address
-            <input type="email" name="email" placeholder="you@example.com">
-          </label>
-          <div class="form-row">
-            <label class="field">
-              Mobile number
-              <input type="tel" name="phone" placeholder="+91">
-            </label>
-            <label class="field">
-              Account type
-              <select name="account_type">
-                <option>Customer</option>
-                <option>Retail buyer</option>
-                <option>Distributor</option>
-                <option>Bulk enquiry</option>
-              </select>
-            </label>
-          </div>
-          <div class="form-row">
-            <label class="field">
-              Password
-              <input type="password" name="password" placeholder="Create password">
-            </label>
-            <label class="field">
-              Confirm password
-              <input type="password" name="confirm_password" placeholder="Confirm password">
-            </label>
-          </div>
-          <label class="field">
-            Notes
-            <textarea name="notes" placeholder="Optional message for bulk or distributor enquiry"></textarea>
-          </label>
-          <label class="checkbox-row">
-            <input type="checkbox" name="terms">
-            <span>I agree to be contacted by RudraBitez regarding orders, product updates, and partnership enquiries.</span>
-          </label>
-          <button class="button" type="submit">Create Account</button>
-        </form>
-        <div class="auth-alt">
-          <span>Already registered?</span>
-          <a href="signin.html" style="font-weight:800; color:var(--rust);">Sign in here</a>
-        </div>
-        <div class="auth-alt">
-          <a href="index.html" style="font-weight:800;">Back to Home</a>
-        </div>
-      </section>
+  <header class="authplus-topbar">
+    <a class="authplus-brand" href="index.html" aria-label="RudraBitez home">
+      <img src="assets/rudrabitez-lockup.svg" alt="RudraBitez">
+    </a>
+    <nav class="authplus-nav" aria-label="Quick links">
+      <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="authplus-top-actions">
+      <a class="authplus-mini-link" href="signin.html">Sign In</a>
+      <a class="authplus-mini-button" href="checkout.html">Buy Now</a>
     </div>
+  </header>
+
+  <main class="authplus-stage">
+    <section class="authplus-showcase authplus-showcase-register">
+      <div class="authplus-showcase-copy">
+        <span class="authplus-kicker">Create Account</span>
+        <h1>Join RudraBitez for a smoother order journey.</h1>
+        <p>Register once and keep your details ready for repeat orders, family gifting, marketplace follow-ups, and faster payment checkout.</p>
+      </div>
+
+      <div class="authplus-story-card">
+        <div class="authplus-story-text">
+          <strong>Why create an account?</strong>
+          <ul>
+            <li>Track your preferred snack orders faster.</li>
+            <li>Save delivery details for repeat checkout.</li>
+            <li>Access future flavor launches and offers.</li>
+          </ul>
+        </div>
+        <img src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez product pouch">
+      </div>
+
+      <div class="authplus-benefit-row">
+        <article class="authplus-benefit-card">
+          <strong>Premium Product</strong>
+          <span>Royal Yellow Banana Chips made for direct online selling.</span>
+        </article>
+        <article class="authplus-benefit-card">
+          <strong>Freshly Packed</strong>
+          <span>Traditional taste with clean manufacturing standards.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="authplus-panel-wrap">
+      <div class="authplus-panel authplus-panel-register">
+        <div class="authplus-panel-head">
+          <span class="authplus-panel-tag">Register</span>
+          <h2>Create your customer account</h2>
+          <p>Fill in your details below to get started with RudraBitez.</p>
+        </div>
+
+        <div class="authplus-status" data-auth-status aria-live="polite"></div>
+
+        <form id="register-form" class="authplus-form" data-auth-mode="register" novalidate>
+          <div class="authplus-grid authplus-grid-two">
+            <label class="authplus-field">
+              <span>First Name</span>
+              <input type="text" name="first_name" autocomplete="given-name" placeholder="First name">
+              <small class="authplus-error" data-error-for="first_name"></small>
+            </label>
+
+            <label class="authplus-field">
+              <span>Last Name</span>
+              <input type="text" name="last_name" autocomplete="family-name" placeholder="Last name">
+              <small class="authplus-error" data-error-for="last_name"></small>
+            </label>
+          </div>
+
+          <div class="authplus-grid authplus-grid-two">
+            <label class="authplus-field">
+              <span>Email Address</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+              <small class="authplus-error" data-error-for="email"></small>
+            </label>
+
+            <label class="authplus-field">
+              <span>Phone Number</span>
+              <input type="tel" name="phone" inputmode="numeric" autocomplete="tel" placeholder="10 digit mobile number">
+              <small class="authplus-error" data-error-for="phone"></small>
+            </label>
+          </div>
+
+          <label class="authplus-field">
+            <span>Account Type</span>
+            <select name="account_type">
+              <option value="">Select account type</option>
+              <option value="customer">Retail Customer</option>
+              <option value="bulk">Bulk Buyer</option>
+              <option value="distributor">Distributor / Partner</option>
+            </select>
+            <small class="authplus-error" data-error-for="account_type"></small>
+          </label>
+
+          <div class="authplus-grid authplus-grid-two">
+            <label class="authplus-field">
+              <span>Password</span>
+              <div class="authplus-password-wrap">
+                <input type="password" name="password" autocomplete="new-password" placeholder="Create password">
+                <button type="button" class="authplus-toggle" data-password-toggle aria-label="Show password">Show</button>
+              </div>
+              <small class="authplus-error" data-error-for="password"></small>
+            </label>
+
+            <label class="authplus-field">
+              <span>Confirm Password</span>
+              <div class="authplus-password-wrap">
+                <input type="password" name="confirm_password" autocomplete="new-password" placeholder="Confirm password">
+                <button type="button" class="authplus-toggle" data-password-toggle aria-label="Show password">Show</button>
+              </div>
+              <small class="authplus-error" data-error-for="confirm_password"></small>
+            </label>
+          </div>
+
+          <div class="authplus-strength" data-strength-meter>
+            <div class="authplus-strength-bar">
+              <span class="authplus-strength-fill"></span>
+            </div>
+            <p>Password should include uppercase, lowercase, number, and special character.</p>
+          </div>
+
+          <label class="authplus-field">
+            <span>Notes (Optional)</span>
+            <textarea name="notes" rows="3" placeholder="Tell us if you are ordering for family, gifting, or bulk enquiries."></textarea>
+            <small class="authplus-error" data-error-for="notes"></small>
+          </label>
+
+          <label class="authplus-check authplus-check-block">
+            <input type="checkbox" name="terms">
+            <span>I agree to the privacy policy, shipping rules, and terms of service.</span>
+          </label>
+          <small class="authplus-error" data-error-for="terms"></small>
+
+          <button type="submit" class="authplus-submit">Create Account</button>
+        </form>
+
+        <div class="authplus-switch">
+          <span>Already registered?</span>
+          <a href="signin.html">Sign in here</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+    <footer class="footer footer-compact">
+      <div class="container footer-compact-wrap">
+        <div class="footer-rich-top">
+          <div class="footer-brand-block">
+            <a class="footer-brandmark" href="index.html#top">RudraBitez<sup>TM</sup></a>
+            <div class="footer-brand-copy">
+              <p>Premium Royal Yellow Banana Chips</p>
+              <p>Traditional taste with hygienic packaging</p>
+              <p>Crafted for gifting, direct orders, and retail confidence</p>
+              <p>Make every bite a crisp and memorable snack moment</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Explore Banana Chips</h3>
+            <nav class="footer-rich-list" aria-label="Explore banana chips">
+              <a href="product.html">Royal Yellow Chips</a>
+              <a href="index.html#products">Upcoming Flavors</a>
+              <a href="checkout.html">Buy Now</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Company</h3>
+            <nav class="footer-rich-list" aria-label="Company links">
+              <a href="index.html#about">Our Story</a>
+              <a href="product.html">Quality Promise</a>
+              <a href="index.html#contact">Get In Touch</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Connect With Us</h3>
+            <div class="footer-contact-block">
+              <p>RudraBitez / Rudra Foods</p>
+              <p>Mumbai, India</p>
+              <p>Phone: <a href="tel:+918591858021">+91 8591858021</a></p>
+              <p>Email: <a href="mailto:info@rudrabitez.com">info@rudrabitez.com</a></p>
+            </div>
+            <div class="footer-social" aria-label="Social media links">
+              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp"><span class="footer-social-label">WA</span></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><span class="footer-social-label">f</span></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="footer-social-label">IG</span></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><span class="footer-social-label">YT</span></a>
+              <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><span class="footer-social-label">P</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-compact-bottom">
+          <p class="footer-compact-copy">© 2026 RudraBitez. All rights reserved.</p>
+          <nav class="footer-compact-links" aria-label="Footer links">
+            <a href="index.html#contact">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="shipping-returns.html">Shipping &amp; Returns</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

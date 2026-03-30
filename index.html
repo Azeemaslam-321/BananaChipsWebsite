@@ -6,7 +6,161 @@
   <title>RudraBitez | Royal Yellow Banana Chips</title>
   <meta name="description" content="RudraBitez Royal Yellow Banana Chips with premium pouch packaging, classic salted taste, and direct order support.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
   <script src="site.js" defer></script>
+  <style>
+   
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.hero-slider-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.52);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, width 0.2s ease;
+}
+
+.hero-slider-dot.is-active {
+  width: 26px;
+  background: #fff8ed;
+}
+
+@media (max-width: 768px) {
+  .hero-visual {
+    min-height: 520px !important;
+    border-radius: 28px !important;
+  }
+
+  .hero-slider-track {
+    min-height: 520px !important;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-mobile-stage {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 300px !important;
+    margin-top: 95px !important;
+    padding: 0 18px !important;
+  }
+
+  .hero-mobile-stage .hero-left-pack,
+  .hero-mobile-stage .hero-right-pack {
+    width: 24% !important;
+    max-width: 90px !important;
+    max-height: 180px !important;
+    opacity: 0.55 !important;
+  }
+
+  .hero-mobile-stage .hero-left-pack {
+    left: 6% !important;
+  }
+
+  .hero-mobile-stage .hero-right-pack {
+    right: 6% !important;
+  }
+
+  .hero-mobile-stage .hero-main-pack {
+    width: 58% !important;
+    max-width: 210px !important;
+    max-height: 260px !important;
+    transform: scale(1.02) !important;
+  }
+
+  .hero-top-badge {
+    top: 14px !important;
+    left: 14px !important;
+    right: 14px !important;
+    max-width: 240px !important;
+    min-height: 58px !important;
+    padding: 12px 14px !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-top-badge .hero-badge-icon {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .hero-top-badge .hero-badge-small {
+    font-size: 0.8rem !important;
+  }
+
+  .hero-top-badge .hero-badge-strong {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-bottom-badge {
+    left: 50% !important;
+    right: auto !important;
+    bottom: 22px !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 32px) !important;
+    max-width: 300px !important;
+    min-height: 64px !important;
+    padding: 12px 16px !important;
+    border-radius: 18px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .hero-bottom-badge strong {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-bottom-badge span {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-slider-controls {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 92px !important;
+    z-index: 6 !important;
+  }
+
+  .hero-slider-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.2rem !important;
+  }
+
+  .hero-slider-dots {
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-slider-track {
+    min-height: 420px !important;
+  }
+}
+
+  </style>
 </head>
 <body>
   <div class="page-shell">
@@ -17,7 +171,10 @@
           <span></span>
           <span></span>
         </button>
-        <a class="brand" href="#top" aria-label="RudraBitez home">
+      <a class="brand" href="#top" aria-label="RudraBitez home">
+  <!-- <img src="images/logo.png" alt="RudraBitez Logo" class="brand-logo"> -->
+  <span class="brand-name">RudraBitez</span>
+</a>
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 32 32" fill="none">
               <circle cx="10.5" cy="10.5" r="5.5" stroke="currentColor" stroke-width="2"></circle>
@@ -26,11 +183,11 @@
             </svg>
           </span>
           <span class="brand-name">RudraBitez</span>
-        </a>
+        </a> 
         <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
           <a href="#top">Home</a>
           <a href="#about">About Us</a>
-          <a href="#products">Products</a>
+          <a href="products.html">Products</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="nav-actions" aria-label="Quick actions">
@@ -51,66 +208,156 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow fade-up">Premium Royal Yellow Banana Chips</span>
-            <h1 class="fade-up delay-1">Traditional Banana Chips Should Not Mean Compromising Quality</h1>
-            <p class="fade-up delay-2">Premium Royal Yellow Banana Chips - Fresh, Crispy &amp; Hygienically Packed</p>
-            <div class="hero-actions fade-up delay-3">
-              <a class="button" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips." target="_blank" rel="noreferrer">Order Now</a>
-              <a class="button-outline" href="#order">Shop on Amazon</a>
-            </div>
-            <div class="hero-tags">
-              <span class="tag">Premium Quality</span>
-              <span class="tag">Hygienic Packaging</span>
-              <span class="tag">No Preservatives</span>
-            </div>
-          </div>
+    <section class="hero" style="padding:54px 0 34px;">
+  <div class="container hero-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:center;">
 
-          <div class="hero-visual fade-up delay-2">
-            <div class="hero-float top">
-              <strong>Classic Salted</strong>
-              <p>Built around your actual pack artwork, not a generic placeholder design.</p>
-            </div>
-            <div class="hero-pack">
-              <img class="hero-pack-front" src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips front pack">
-              <img class="hero-pack-back" src="assets/banana-mockup-page-2-transparent.png" alt="RudraBitez Royal Yellow Banana Chips back pack">
-            </div>
-            <div class="hero-float bottom">
-              <strong>200g Premium Pouch</strong>
-              <p>Designed for direct order, gifting, and marketplace-ready presentation.</p>
-            </div>
-          </div>
+    <div class="hero-copy">
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(247,187,64,0.18);color:#b35e00;font-size:0.82rem;font-weight:800;">
+        ✦ Premium Royal Yellow Banana Chips
+      </span>
+
+      <h1 style="margin:18px 0 0;max-width:11.5ch;font-size:clamp(2.2rem,4.4vw,4rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+        Traditional Banana Chips with
+        <span style="color:#d97a05;">Premium Crunch &amp; Cleaner Packaging</span>
+      </h1>
+
+      <p style="margin:22px 0 0;max-width:44ch;font-size:clamp(0.98rem,1.25vw,1.14rem);color:#536a74;line-height:1.8;">
+        RudraBitez Royal Yellow Banana Chips deliver fresh crunch, classic salted taste, hygienic packing, and direct brand support for everyday snacking.
+      </p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;">
+        <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">No Preservatives</span>
+        <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">No Artificial Colors</span>
+        <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">Hygienically Packed</span>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;">
+        <a
+          href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips."
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font-weight:800;color:#fff;background:linear-gradient(135deg,#ff6d57,#cb473b);box-shadow:0 16px 30px rgba(141,66,25,0.22);text-decoration:none;"
+        >
+          Order Now <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="products.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:#fff;border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;">
+          Explore Products
+        </a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;" aria-hidden="true">
+          <span style="width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(247,187,64,0.18);color:#c06e06;font-size:0.92rem;font-weight:800;">1</span>
+          <span style="width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(247,187,64,0.18);color:#c06e06;font-size:0.92rem;font-weight:800;">2</span>
+          <span style="width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(247,187,64,0.18);color:#c06e06;font-size:0.92rem;font-weight:800;">3</span>
+          <span style="width:34px;height:34px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:rgba(247,187,64,0.18);color:#c06e06;font-size:0.92rem;font-weight:800;">4</span>
         </div>
 
-        <div class="container" style="margin-top:30px;">
-          <span class="eyebrow">Why RudraBitez?</span>
-          <h2 style="margin-top:16px;">Fresh, trusted, and premium in every pack.</h2>
+        <div style="display:grid;gap:4px;">
+          <strong style="color:#183632;font-size:1rem;">Trusted by premium snack buyers</strong>
+          <span style="color:#536a74;font-size:0.95rem;">Fresh, crispy, and loved again &amp; again</span>
         </div>
-        <div class="container metrics">
-          <div class="metric-card">
-            <div class="metric-icon">✓</div>
-            <span>No Preservatives</span>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon">✓</div>
-            <span>No Artificial Colors</span>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon">✓</div>
-            <span>Hygienically Packed</span>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon">✓</div>
-            <span>Premium Quality Bananas</span>
-          </div>
-          <div class="metric-card">
-            <div class="metric-icon">✓</div>
-            <span>Freshly Made</span>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+
+    <div class="hero-visual" style="position:relative;min-height:620px;border-radius:36px;overflow:hidden;background:
+    radial-gradient(circle at 18% 12%, rgba(255,238,204,0.62), transparent 18%),
+    linear-gradient(180deg,#fffdf7 0%, #fff9ef 100%);box-shadow:0 24px 70px rgba(30,55,62,0.14);">
+     <div class="hero-slider-track" style="position:relative;min-height:620px;">
+
+  <article class="hero-slide hero-slide-feature is-active" data-hero-slide>
+    <div class="hero-slider" data-hero-slider style="position:relative;height:100%;">
+  <div class="hero-slider-track" style="position:relative;min-height:620px;">
+
+    <!-- Slide 1 -->
+   `
+
+    <!-- Slide 2 -->
+    <article class="hero-slide" data-hero-slide>
+      <div style="position:relative;display:flex;align-items:center;justify-content:center;height:520px;margin-top:40px;">
+        <img
+          src="assets/banana-mockup-page-1.png"
+          alt="Front Pack"
+          style="width:min(80%,320px);max-height:420px;object-fit:contain;filter:drop-shadow(0 24px 34px rgba(14,23,18,0.22));"
+        >
+      </div>
+    </article>
+
+    <!-- Slide 3 -->
+    <article class="hero-slide" data-hero-slide>
+      <div style="position:relative;display:flex;align-items:center;justify-content:center;height:520px;margin-top:40px;">
+        <img
+          src="assets/banana-mockup-page-2.png"
+          alt="Back Pack"
+          style="width:min(80%,300px);max-height:420px;object-fit:contain;filter:drop-shadow(0 24px 34px rgba(14,23,18,0.22));"
+        >
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Controls -->
+  <div style="position:absolute;left:16px;right:16px;bottom:16px;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <button type="button" data-hero-prev aria-label="Previous slide" style="width:42px;height:42px;border:0;border-radius:999px;background:rgba(255,255,255,0.9);cursor:pointer;font-size:22px;box-shadow:0 12px 20px rgba(12,26,32,0.12);">
+      &#8249;
+    </button>
+
+    <div class="hero-slider-dots" role="tablist" aria-label="Hero slides" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,0.18);backdrop-filter:blur(10px);">
+      <button class="hero-slider-dot is-active" type="button" data-hero-dot aria-label="Show slide 1"></button>
+      <button class="hero-slider-dot" type="button" data-hero-dot aria-label="Show slide 2"></button>
+      <button class="hero-slider-dot" type="button" data-hero-dot aria-label="Show slide 3"></button>
+    </div>
+
+    <button type="button" data-hero-next aria-label="Next slide" style="width:42px;height:42px;border:0;border-radius:999px;background:rgba(255,255,255,0.9);cursor:pointer;font-size:22px;box-shadow:0 12px 20px rgba(12,26,32,0.12);">
+      &#8250;
+    </button>
+  </div>
+</div>
+
+    <div style="position:absolute;top:22px;left:22px;z-index:3;display:flex;align-items:center;gap:14px;min-height:76px;padding:14px 20px;border-radius:22px;background:rgba(255,255,255,0.96);border:1px solid rgba(23,49,58,0.08);box-shadow:0 18px 30px rgba(19,34,42,0.14);">
+      <span style="width:46px;height:46px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:#d7f8df;color:#17a34a;font-size:1.45rem;font-weight:800;flex:0 0 auto;">✓</span>
+      <div style="display:grid;gap:4px;">
+        <span style="color:#7a808d;font-size:0.94rem;">Premium Packed</span>
+        <strong style="color:#0f1826;font-size:1.05rem;">Fresh &amp; Crispy</strong>
+      </div>
+    </div>
+
+    <div style="position:absolute;right:22px;bottom:22px;z-index:3;display:flex;align-items:center;gap:12px;max-width:240px;min-height:76px;padding:14px 20px;border-radius:22px;background:rgba(255,255,255,0.96);border:1px solid rgba(23,49,58,0.08);box-shadow:0 18px 30px rgba(19,34,42,0.14);">
+      <strong style="color:#d17016;font-size:2rem;line-height:0.95;">97%</strong>
+      <span style="color:#0f1826;font-size:0.95rem;font-weight:700;line-height:1.35;">Choose RudraBitez again &amp; again</span>
+    </div>
+  </article>
+
+  <article class="hero-slide hero-slide-photo" data-hero-slide>
+    <div style="display:flex;align-items:center;justify-content:center;padding:34px 30px 92px;">
+      <div style="position:relative;width:min(84%,500px);display:flex;align-items:center;justify-content:center;">
+        <img src="assets/banana-mockup-page-1.png" alt="RudraBitez Royal Yellow Banana Chips front pack" style="width:100%;max-height:470px;object-fit:contain;display:block;filter:drop-shadow(0 24px 34px rgba(14,23,18,0.22));">
+      </div>
+      <div style="position:absolute;left:28px;right:28px;bottom:26px;display:flex;flex-direction:column;gap:8px;padding:18px 20px;border-radius:22px;background:rgba(255,248,239,0.92);border:1px solid rgba(255,255,255,0.28);box-shadow:0 16px 28px rgba(14,23,18,0.12);backdrop-filter:blur(10px);">
+        <strong style="color:#17474b;">Signature Front Pack</strong>
+        <p style="margin:0;color:#5f6d72;line-height:1.8;">Balanced product framing with controlled scale for a cleaner premium presentation.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="hero-slide hero-slide-photo hero-slide-photo-back" data-hero-slide>
+    <div style="display:flex;align-items:center;justify-content:center;padding:34px 30px 92px;">
+      <div style="position:relative;width:min(72%,430px);display:flex;align-items:center;justify-content:center;">
+        <img src="assets/banana-mockup-page-2.png" alt="RudraBitez Royal Yellow Banana Chips nutrition back pack" style="width:100%;max-height:470px;object-fit:contain;display:block;filter:drop-shadow(0 24px 34px rgba(14,23,18,0.22));">
+      </div>
+      <div style="position:absolute;left:28px;right:28px;bottom:26px;display:flex;flex-direction:column;gap:8px;padding:18px 20px;border-radius:22px;background:rgba(239,247,246,0.9);border:1px solid rgba(255,255,255,0.28);box-shadow:0 16px 28px rgba(14,23,18,0.12);backdrop-filter:blur(10px);">
+        <strong style="color:#17474b;">Back Pack Details</strong>
+        <p style="margin:0;color:#5f6d72;line-height:1.8;">Ingredients, nutrition, and product information displayed in a clean spotlight view.</p>
+      </div>
+    </div>
+  </article>
+
+</div>
+    </div>
+  </div>
+
+</section>
 
       <section class="section" id="about">
         <div class="container">
@@ -165,6 +412,34 @@
         </div>
       </section>
 
+      <section class="section video-feature" id="brand-film">
+        <div class="container video-feature-grid">
+          <article class="panel video-copy-panel">
+            <span class="eyebrow">Brand Film</span>
+            <h2 style="margin-top:18px;">Watch RudraBitez in a more premium, product-led presentation.</h2>
+            <p style="margin-top:18px;">This showcase adds movement, real product feel, and a more polished brand impression for customers who want to see the pack experience before ordering.</p>
+            <ul class="detail-list" style="margin-top:24px;">
+              <li><span>Premium Look</span><strong>Clean cinematic product placement</strong></li>
+              <li><span>Pack Visibility</span><strong>Strong front-facing brand presentation</strong></li>
+              <li><span>Customer Trust</span><strong>Real product feel with modern polish</strong></li>
+            </ul>
+          </article>
+
+          <article class="panel video-stage">
+            <div class="video-stage-head">
+              <span class="video-badge">Premium Product Video</span>
+              <p>Styled for desktop and mobile with managed frame sizing.</p>
+            </div>
+            <div class="video-shell">
+              <video class="brand-film-video" controls autoplay muted loop playsinline preload="metadata" poster="assets/banana-mockup-page-1.png">
+                <source src="assets/rudrabitez-brand-film.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section steps-band">
         <div class="container">
           <div class="section-head">
@@ -188,7 +463,7 @@
             <article class="step-card">
               <div class="step-number">3</div>
               <strong>Choose your order path</strong>
-              <p>Buy on WhatsApp now, enquire for bulk, or plug in marketplaces like Amazon, Flipkart, and Blinkit later.</p>
+              <p>Buy on WhatsApp now, enquire for bulk, or plug in marketplaces like Amazon and Flipkart later.</p>
             </article>
           </div>
         </div>
@@ -204,7 +479,7 @@
             <p>Flagship product details are shown clearly, while future flavor launches are positioned as coming soon.</p>
           </div>
           <div class="products-grid">
-            <article class="product-card">
+            <article class="product-card" data-card-link="product.html" tabindex="0" role="link" aria-label="Open RudraBitez Royal Yellow Banana Chips details">
               <div class="product-thumb">
                 <img src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips pouch">
               </div>
@@ -220,7 +495,7 @@
                 <span class="pill">Shelf Life: 6 Months</span>
               </div>
               <div class="hero-actions" style="margin-top:18px;">
-                <a class="button" href="checkout.html">Buy Now</a>
+                <a class="button" href="product.html">View Product</a>
                 <a class="button-outline" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips." target="_blank" rel="noreferrer">Order on WhatsApp</a>
               </div>
             </article>
@@ -235,12 +510,6 @@
               <strong style="text-align:center;">Peri Peri Banana Chips</strong>
               <p class="coming-state" style="text-align:center;">Coming Soon</p>
               <p class="coming-copy">A spicy peri peri flavor concept for snack lovers who enjoy extra kick with the same crisp banana-chip texture.</p>
-            </article>
-            <article class="product-card coming-card">
-              <div class="coming-icon">+</div>
-              <strong style="text-align:center;">More Flavors</strong>
-              <p class="coming-state" style="text-align:center;">Coming Soon</p>
-              <p class="coming-copy">More RudraBitez flavor launches are on the way. Stay connected for the next premium banana chips drop.</p>
             </article>
           </div>
         </div>
@@ -466,8 +735,8 @@
               <p>Yes. WhatsApp ordering is already connected for direct enquiries and order conversations.</p>
             </details>
             <details class="faq-item">
-              <summary>Are Amazon, Flipkart, and Blinkit links available?</summary>
-              <p>The page is ready for them. You can plug those listing links in as soon as your marketplace pages go live.</p>
+              <summary>Are Amazon and Flipkart links available?</summary>
+              <p>The page is ready for them. You can plug those listing links in as soon as your marketplace pages go live, while WhatsApp ordering stays active right now.</p>
             </details>
             <details class="faq-item">
               <summary>Can RudraBitez handle bulk or distributor requests?</summary>
@@ -482,70 +751,59 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-wrap">
-        <div class="footer-grid">
-          <div>
-            <div class="brand">
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 32 32" fill="none">
-                  <circle cx="10.5" cy="10.5" r="5.5" stroke="currentColor" stroke-width="2"></circle>
-                  <path d="M19 21c3.2-5.3 7.1-7.7 11-7-1.2 3.9-4.8 8.1-11 7Z" fill="currentColor"></path>
-                  <path d="M15.5 18.5c3-4.6 2.7-9.1-1-13.5-2 4.3-1.8 8.6 1 13.5Z" fill="currentColor" opacity=".75"></path>
-                </svg>
-              </span>
-              <span class="brand-name">RudraBitez</span>
-            </div>
-            <p style="margin-top:18px;max-width:58ch;">Premium Royal Yellow Banana Chips with the crispy taste of tradition, supported by stronger packaging, better trust signals, and a homepage flow modeled closely on your reference website.</p>
-            <div class="social-icons">
-              <a class="social-icon" href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.5 11.8c0 4.8-3.9 8.7-8.8 8.7-1.5 0-3-.4-4.2-1.1L3 20.8l1.5-4.2A8.65 8.65 0 0 1 2.9 11.8c0-4.8 3.9-8.7 8.8-8.7 4.9 0 8.8 3.9 8.8 8.7Z"></path>
-                </svg>
-              </a>
-              <a class="social-icon" href="mailto:info@rudrabitez.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 6h16v12H4z"></path>
-                  <path d="m4 7 8 6 8-6"></path>
-                </svg>
-              </a>
-              <a class="social-icon" href="#" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1"></circle>
-                </svg>
-              </a>
-              <a class="social-icon" href="#" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.5-.1-1.2-.1-2-.1-2 0-3.4 1.2-3.4 3.6v2.1H8.4V14h2.2v7h2.9Z"></path>
-                </svg>
-              </a>
-            </div>
-            <p class="footer-note">Follow RudraBitez for offers, launches, and upcoming flavor drops.</p>
-          </div>
-          <div>
-            <h3 class="footer-title">Quick Links</h3>
-            <div class="footer-list">
-              <a href="#about">About Us</a>
-              <a href="#products">Products</a>
-              <a href="#contact">Contact Us</a>
-              <a href="signin.html">Sign In</a>
-              <a href="register.html">Register</a>
+    <footer class="footer footer-compact">
+      <div class="container footer-compact-wrap">
+        <div class="footer-rich-top">
+          <div class="footer-brand-block">
+            <a class="footer-brandmark" href="#top">RudraBitez<sup>TM</sup></a>
+            <div class="footer-brand-copy">
+              <p>Premium Royal Yellow Banana Chips</p>
+              <p>Traditional taste with hygienic packaging</p>
+              <p>Crafted for gifting, direct orders, and retail confidence</p>
+              <p>Make every bite a crisp and memorable snack moment</p>
             </div>
           </div>
           <div>
-            <h3 class="footer-title">Customer Care</h3>
-            <div class="footer-list">
-              <a href="#contact">Contact Us</a>
-              <a href="privacy-policy.html">Privacy Policy</a>
-              <a href="shipping-returns.html">Shipping & Returns</a>
-              <a href="terms-of-service.html">Terms of Service</a>
-              <span>Rudra Foods, Mumbai, India</span>
-              <span>Phone: +91 8591858021</span>
-            </div>
-            <p style="margin-top:18px;">© 2026 RudraBitez. All rights reserved.</p>
+            <h3 class="footer-col-title">Explore Banana Chips</h3>
+            <nav class="footer-rich-list" aria-label="Explore banana chips">
+              <a href="product.html">Royal Yellow Chips</a>
+              <a href="#products">Upcoming Flavors</a>
+              <a href="checkout.html">Buy Now</a>
+            </nav>
           </div>
+          <div>
+            <h3 class="footer-col-title">Company</h3>
+            <nav class="footer-rich-list" aria-label="Company links">
+              <a href="#about">Our Story</a>
+              <a href="product.html">Quality Promise</a>
+              <a href="#contact">Get In Touch</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Connect With Us</h3>
+            <div class="footer-contact-block">
+              <p>RudraBitez / Rudra Foods</p>
+              <p>Mumbai, India</p>
+              <p>Phone: <a href="tel:+918591858021">+91 8591858021</a></p>
+              <p>Email: <a href="mailto:info@rudrabitez.com">info@rudrabitez.com</a></p>
+            </div>
+            <div class="footer-social" aria-label="Social media links">
+              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp"><span class="footer-social-label">WA</span></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><span class="footer-social-label">f</span></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="footer-social-label">IG</span></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><span class="footer-social-label">YT</span></a>
+              <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><span class="footer-social-label">P</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-compact-bottom">
+          <p class="footer-compact-copy">© 2026 RudraBitez. All rights reserved.</p>
+          <nav class="footer-compact-links" aria-label="Footer links">
+            <a href="#contact">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="shipping-returns.html">Shipping &amp; Returns</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+          </nav>
         </div>
       </div>
     </footer>

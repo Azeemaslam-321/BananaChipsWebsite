@@ -4,61 +4,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In | RudraBitez</title>
-  <meta name="description" content="Sign in to RudraBitez for order tracking, distributor access, and account management.">
+  <meta name="description" content="Sign in to RudraBitez for faster checkout, saved details, and smoother order tracking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth-pages.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
+  <script src="auth.js" defer></script>
 </head>
-<body>
-  <main class="auth-page">
-    <div class="container auth-grid">
-      <section class="auth-side">
-        <div class="auth-copy">
-          <a class="brand" href="index.html" aria-label="Back to RudraBitez home">
-            <span class="brand-mark">RB</span>
-            <span class="brand-name">RudraBitez</span>
-          </a>
-          <span class="eyebrow" style="margin-top:28px;">Account access</span>
-          <h1 style="margin-top:18px;">Sign in and continue your RudraBitez journey.</h1>
-          <p style="margin-top:18px;">Built in the same premium visual language as the home page, this sign-in screen is ready for customer logins, partner dashboards, or distributor access later.</p>
-          <div class="badge-row" style="margin-top:24px;">
-            <span class="mini-badge">Order status</span>
-            <span class="mini-badge">Saved details</span>
-            <span class="mini-badge">Partner access</span>
-          </div>
-        </div>
-        <img class="auth-pack" src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips pack">
-      </section>
+<body class="authplus-body">
+  <div class="authplus-page-glow authplus-page-glow-left"></div>
+  <div class="authplus-page-glow authplus-page-glow-right"></div>
 
-      <section class="auth-card">
-        <span class="eyebrow">Welcome back</span>
-        <h1 style="margin-top:18px;">Sign in</h1>
-        <p>Use this page for returning customers, distributors, or admin users once the backend authentication is connected.</p>
-        <form class="form-grid">
-          <label class="field">
-            Email address
-            <input type="email" name="email" placeholder="you@example.com">
-          </label>
-          <label class="field">
-            Password
-            <input type="password" name="password" placeholder="Enter your password">
-          </label>
-          <div class="small-note" style="justify-content:space-between; margin-top:4px;">
-            <label class="checkbox-row" style="margin:0;">
-              <input type="checkbox" name="remember">
-              <span>Remember me</span>
-            </label>
-            <a href="mailto:info@rudrabitez.com" style="font-weight:800; color:var(--rust);">Need help signing in?</a>
-          </div>
-          <button class="button" type="submit">Sign In</button>
-        </form>
-        <div class="auth-alt">
-          <span>New to RudraBitez?</span>
-          <a href="register.html" style="font-weight:800; color:var(--rust);">Create an account</a>
-        </div>
-        <div class="auth-alt">
-          <a href="index.html" style="font-weight:800;">Back to Home</a>
-        </div>
-      </section>
+  <header class="authplus-topbar">
+    <a class="authplus-brand" href="index.html" aria-label="RudraBitez home">
+      <img src="assets/rudrabitez-lockup.svg" alt="RudraBitez">
+    </a>
+    <nav class="authplus-nav" aria-label="Quick links">
+      <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="authplus-top-actions">
+      <a class="authplus-mini-link" href="register.html">Register</a>
+      <a class="authplus-mini-button" href="checkout.html">Buy Now</a>
     </div>
+  </header>
+
+  <main class="authplus-stage">
+    <section class="authplus-showcase">
+      <div class="authplus-showcase-copy">
+        <span class="authplus-kicker">Secure Customer Access</span>
+        <h1>Welcome back to your premium snacking space.</h1>
+        <p>Sign in to save delivery details, speed up checkout, and manage your RudraBitez banana chips orders with a cleaner, more professional experience.</p>
+      </div>
+
+      <div class="authplus-visual-card">
+        <div class="authplus-orbit authplus-orbit-one"></div>
+        <div class="authplus-orbit authplus-orbit-two"></div>
+        <div class="authplus-pack-frame">
+          <img class="authplus-pack-front" src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips pack">
+        </div>
+        <div class="authplus-floating authplus-floating-top">
+          <strong>Fast checkout</strong>
+          <span>Saved details for repeat orders and gifting.</span>
+        </div>
+        <div class="authplus-floating authplus-floating-bottom">
+          <strong>Trusted quality</strong>
+          <span>Premium pack, fresh crunch, hygienic handling.</span>
+        </div>
+      </div>
+
+      <div class="authplus-metric-grid">
+        <article class="authplus-metric">
+          <strong>200g</strong>
+          <span>Premium pouch ready for direct orders.</span>
+        </article>
+        <article class="authplus-metric">
+          <strong>Classic Salted</strong>
+          <span>Signature taste with authentic banana crunch.</span>
+        </article>
+        <article class="authplus-metric">
+          <strong>WhatsApp Support</strong>
+          <span>Quick help for bulk, retail, and repeat buyers.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="authplus-panel-wrap">
+      <div class="authplus-panel">
+        <div class="authplus-panel-head">
+          <span class="authplus-panel-tag">Sign In</span>
+          <h2>Access your account</h2>
+          <p>Use your registered email and password to continue to RudraBitez.</p>
+        </div>
+
+        <div class="authplus-status" data-auth-status aria-live="polite"></div>
+
+        <form id="signin-form" class="authplus-form" data-auth-mode="signin" novalidate>
+          <label class="authplus-field">
+            <span>Email Address</span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+            <small class="authplus-error" data-error-for="email"></small>
+          </label>
+
+          <label class="authplus-field">
+            <span>Password</span>
+            <div class="authplus-password-wrap">
+              <input type="password" name="password" autocomplete="current-password" placeholder="Enter your password">
+              <button type="button" class="authplus-toggle" data-password-toggle aria-label="Show password">Show</button>
+            </div>
+            <small class="authplus-error" data-error-for="password"></small>
+          </label>
+
+          <div class="authplus-row">
+            <label class="authplus-check">
+              <input type="checkbox" name="remember">
+              <span>Remember this device</span>
+            </label>
+            <a href="mailto:info@rudrabitez.com" class="authplus-inline-link">Need help?</a>
+          </div>
+
+          <button type="submit" class="authplus-submit">Sign In Securely</button>
+        </form>
+
+        <div class="authplus-helper">
+          <p>Demo account for presentation: <strong>demo@rudrabitez.com</strong> / <strong>Rudra@123</strong></p>
+        </div>
+
+        <div class="authplus-switch">
+          <span>New to RudraBitez?</span>
+          <a href="register.html">Create your account</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+    <footer class="footer footer-compact">
+      <div class="container footer-compact-wrap">
+        <div class="footer-rich-top">
+          <div class="footer-brand-block">
+            <a class="footer-brandmark" href="index.html#top">RudraBitez<sup>TM</sup></a>
+            <div class="footer-brand-copy">
+              <p>Premium Royal Yellow Banana Chips</p>
+              <p>Traditional taste with hygienic packaging</p>
+              <p>Crafted for gifting, direct orders, and retail confidence</p>
+              <p>Make every bite a crisp and memorable snack moment</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Explore Banana Chips</h3>
+            <nav class="footer-rich-list" aria-label="Explore banana chips">
+              <a href="product.html">Royal Yellow Chips</a>
+              <a href="index.html#products">Upcoming Flavors</a>
+              <a href="checkout.html">Buy Now</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Company</h3>
+            <nav class="footer-rich-list" aria-label="Company links">
+              <a href="index.html#about">Our Story</a>
+              <a href="product.html">Quality Promise</a>
+              <a href="index.html#contact">Get In Touch</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Connect With Us</h3>
+            <div class="footer-contact-block">
+              <p>RudraBitez / Rudra Foods</p>
+              <p>Mumbai, India</p>
+              <p>Phone: <a href="tel:+918591858021">+91 8591858021</a></p>
+              <p>Email: <a href="mailto:info@rudrabitez.com">info@rudrabitez.com</a></p>
+            </div>
+            <div class="footer-social" aria-label="Social media links">
+              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp"><span class="footer-social-label">WA</span></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><span class="footer-social-label">f</span></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="footer-social-label">IG</span></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><span class="footer-social-label">YT</span></a>
+              <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><span class="footer-social-label">P</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-compact-bottom">
+          <p class="footer-compact-copy">© 2026 RudraBitez. All rights reserved.</p>
+          <nav class="footer-compact-links" aria-label="Footer links">
+            <a href="index.html#contact">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="shipping-returns.html">Shipping &amp; Returns</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

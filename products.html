@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RudraBitez | Products</title>
+  <meta name="description" content="Explore RudraBitez products, premium banana chip gallery, product highlights, reviews, and direct WhatsApp ordering.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
+  <script src="site.js" defer></script>
+  <style>
+@media (max-width: 992px) {
+  .products-hero .container,
+  main .container[style*="grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr)"],
+  main .container[style*="grid-template-columns:repeat(2,minmax(0,1fr))"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  main .container[style*="grid-template-columns:repeat(3,minmax(0,1fr))"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-thumb-button img {
+    height: 72px !important;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="brand" href="index.html#top" aria-label="RudraBitez home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">RudraBitez</span>
+        </a>
+        <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+          <a href="index.html#top">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-actions" aria-label="Quick actions">
+          <a class="nav-icon" href="signin.html" aria-label="Sign in">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21a8 8 0 0 0-16 0"></path>
+              <circle cx="12" cy="8" r="4"></circle>
+            </svg>
+          </a>
+          <a class="nav-icon nav-icon-cart" href="checkout.html" aria-label="Checkout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 7h12l-1 12H7L6 7Z"></path>
+              <path d="M9 7a3 3 0 0 1 6 0"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+   <main id="top" class="products-page" style="background:
+radial-gradient(circle at 10% 0%, rgba(20, 93, 103, 0.08), transparent 28%),
+linear-gradient(180deg, #fffdf8 0%, #fff6ef 100%);">
+
+  <!-- TOP HERO / PRODUCT SPOTLIGHT -->
+  <section class="section products-hero" style="padding-top:32px;">
+    <div class="container" style="display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:28px;align-items:start;">
+
+      <!-- LEFT GALLERY -->
+      <article class="panel" data-product-gallery style="min-height:100%;padding:26px;border-radius:28px;background:
+      radial-gradient(circle at 14% 16%, rgba(20, 93, 103, 0.12), transparent 22%),
+      linear-gradient(145deg, #eff7f6, #fff0e3 62%, #ffd1b2 100%);border:1px solid rgba(23,49,58,0.11);box-shadow:0 10px 26px rgba(74,57,24,0.06);overflow:hidden;">
+
+        <div style="position:relative;min-height:560px;padding:34px;border-radius:28px;background:
+        radial-gradient(circle at 18% 18%, rgba(255, 241, 229, 0.5), transparent 22%),
+        linear-gradient(145deg, #fff7ef 0%, #fff1df 48%, #f7dfcb 100%);
+        display:flex;align-items:center;justify-content:center;">
+
+          <span style="position:absolute;top:22px;left:22px;z-index:2;padding:10px 14px;border-radius:999px;background:#ffffff;color:#0d434b;font-size:0.82rem;font-weight:800;letter-spacing:0.03em;text-transform:uppercase;box-shadow:0 12px 24px rgba(23,49,58,0.08);">
+            Best Seller
+          </span>
+
+          <img
+            data-gallery-main
+            src="assets/banana-mockup-page-1-transparent.png"
+            alt="RudraBitez Royal Yellow Banana Chips front pack"
+            style="width:min(100%,460px);max-height:500px;object-fit:contain;filter:drop-shadow(0 24px 34px rgba(15,20,14,0.18));"
+          >
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px;" aria-label="Featured product gallery">
+          <button class="product-thumb-button is-active" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-1-transparent.png" data-gallery-alt="RudraBitez Royal Yellow Banana Chips front pack" style="padding:10px;border:1px solid rgba(23,49,58,0.16);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-1-transparent.png" alt="Front pack thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+          </button>
+
+          <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-2-transparent.png" data-gallery-alt="RudraBitez Royal Yellow Banana Chips back pack" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-2-transparent.png" alt="Back pack thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+          </button>
+
+          <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-1.png" data-gallery-alt="RudraBitez product lifestyle shot" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-1.png" alt="Lifestyle thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+          </button>
+
+          <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-2.png" data-gallery-alt="RudraBitez product back artwork" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-2.png" alt="Artwork thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+          </button>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
+          <span style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,0.6);border:1px solid rgba(20,93,103,0.1);color:#0d434b;font-size:0.92rem;font-weight:700;">Front Pack</span>
+          <span style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,0.6);border:1px solid rgba(20,93,103,0.1);color:#0d434b;font-size:0.92rem;font-weight:700;">Back Pack</span>
+          <span style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,0.6);border:1px solid rgba(20,93,103,0.1);color:#0d434b;font-size:0.92rem;font-weight:700;">Direct Brand Support</span>
+        </div>
+      </article>
+
+      <!-- RIGHT CONTENT -->
+      <article class="panel" style="display:flex;flex-direction:column;gap:20px;padding:26px;border-radius:28px;background:linear-gradient(145deg, rgba(255,255,255,0.96), rgba(251,242,235,0.92));border:1px solid rgba(23,49,58,0.11);box-shadow:0 10px 26px rgba(74,57,24,0.06);position:relative;overflow:hidden;">
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;width:max-content;">
+          ✦ Featured Product Collection
+        </span>
+
+        <h1 style="margin:0;font-size:clamp(2rem,3vw,2.8rem);line-height:1.02;letter-spacing:-0.05em;color:#17313a;">
+          RudraBitez Royal Yellow Banana Chips
+        </h1>
+
+        <p style="margin:0;font-size:1.05rem;line-height:1.8;color:#536a74;max-width:56ch;">
+          Traditional banana chips with <strong style="color:#17313a;">premium packaging</strong>, fresh crunch, classic salted taste, and direct brand support for a cleaner buying experience.
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">No Preservatives</span>
+          <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">No Artificial Colors</span>
+          <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">Hygienically Packed</span>
+          <span style="padding:11px 14px;border-radius:999px;background:rgba(20,93,103,0.08);color:#0d434b;font-size:0.9rem;font-weight:700;">100% Veg</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;border-radius:24px;background:linear-gradient(145deg,#fff6ee,#fff1df);border:1px solid rgba(211,132,77,0.14);">
+          <div>
+            <span style="display:block;color:#846d60;font-size:0.84rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">Featured Price</span>
+            <strong style="display:block;margin-top:6px;color:#183632;font-size:clamp(2rem,3vw,2.8rem);line-height:0.96;">₹249</strong>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;">
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(20,93,103,0.08);color:#145d67;font-size:0.88rem;font-weight:700;">200g Pack</span>
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(20,93,103,0.08);color:#145d67;font-size:0.88rem;font-weight:700;">Classic Salted</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a class="button-whatsapp" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;border:0;background:linear-gradient(135deg,#1fa855,#118743);color:#fff;font-weight:800;box-shadow:0 14px 28px rgba(17,135,67,0.24);text-decoration:none;flex:1 1 220px;">
+            Order on WhatsApp
+          </a>
+
+          <a class="button-outline" href="product.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:#fff;border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;flex:1 1 220px;">
+            View Product Details
+          </a>
+        </div>
+
+        <div style="display:grid;gap:12px;margin:0;padding:0;">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(23,49,58,0.08);">
+            <span style="color:#65767d;">Shelf Life</span>
+            <strong style="color:#193634;text-align:right;">6 Months</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(23,49,58,0.08);">
+            <span style="color:#65767d;">Storage</span>
+            <strong style="color:#193634;text-align:right;">Store in a cool &amp; dry place</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(23,49,58,0.08);">
+            <span style="color:#65767d;">Pack Type</span>
+            <strong style="color:#193634;text-align:right;">Premium Pouch</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(23,49,58,0.08);">
+            <span style="color:#65767d;">FSSAI</span>
+            <strong style="color:#193634;text-align:right;">21526003000118</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;">
+            <span style="color:#65767d;">Support</span>
+            <strong style="color:#193634;text-align:right;">Direct on WhatsApp</strong>
+          </div>
+        </div>
+
+        <div style="padding:18px 20px;border-radius:22px;background:rgba(20,93,103,0.07);border:1px solid rgba(20,93,103,0.1);">
+          <strong style="display:block;margin-bottom:8px;color:#0d434b;">Why customers choose it</strong>
+          <p style="margin:0;color:#5f7279;line-height:1.8;">
+            Fresh crunch, trusted pack information, and a quick direct-order flow without marketplace confusion.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TRUST / WHY -->
+  <section class="section" style="padding-top:10px;">
+    <div class="container">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Why RudraBitez</span>
+          <h2 style="margin:16px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+            Traditional taste with cleaner presentation and stronger trust.
+          </h2>
+        </div>
+        <p style="max-width:56ch;margin:0;color:#627983;line-height:1.8;">
+          Instead of a crowded marketplace feel, this page keeps the product story simple, visual, and buyer-friendly.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;">
+        <article style="background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">01</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Selected bananas</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Better raw material gives a better crunch and a more reliable taste in every pack.</p>
+        </article>
+
+        <article style="background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">02</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Hygienic packing</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Clean handling and premium pouch presentation help build trust before the first order.</p>
+        </article>
+
+        <article style="background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">03</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Direct brand support</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Customers can connect straight to WhatsApp for a quick, clear, low-friction order journey.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT FACTS -->
+  <section class="section" style="padding-top:10px;">
+    <div class="container" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:stretch;">
+      <article style="background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Product Details</span>
+        <h2 style="margin:18px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+          Product facts buyers actually look for.
+        </h2>
+
+        <ul style="margin:22px 0 0;padding:0;list-style:none;display:grid;gap:12px;">
+          <li style="display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(23,49,58,0.11);">
+            <span style="color:#627983;">Product Name</span><strong style="color:#17313a;">Royal Yellow Banana Chips</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(23,49,58,0.11);">
+            <span style="color:#627983;">Net Weight</span><strong style="color:#17313a;">200g</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(23,49,58,0.11);">
+            <span style="color:#627983;">Taste</span><strong style="color:#17313a;">Classic Salted</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(23,49,58,0.11);">
+            <span style="color:#627983;">Veg Mark</span><strong style="color:#17313a;">100% Veg</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(23,49,58,0.11);">
+            <span style="color:#627983;">Suggested Use</span><strong style="color:#17313a;">Tea-time, gifting, everyday snacking</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;gap:18px;">
+            <span style="color:#627983;">Dispatch Support</span><strong style="color:#17313a;">Direct coordination on WhatsApp</strong>
+          </li>
+        </ul>
+      </article>
+
+      <article style="background:
+      radial-gradient(circle at 20% 16%, rgba(20, 93, 103, 0.18), transparent 18%),
+      linear-gradient(145deg, #f6fbfa, #ffd9c6);
+      border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;overflow:hidden;">
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.78);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Brand Promise</span>
+        <h2 style="margin:18px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+          Traditional snack taste, packed for modern buyers.
+        </h2>
+        <p style="margin:18px 0 0;color:#627983;line-height:1.8;">
+          RudraBitez brings traditional banana chips into a cleaner, more premium product experience with direct support and a stronger trust-first presentation.
+        </p>
+
+        <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;">
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.78);color:#145d67;font-size:0.88rem;font-weight:700;">Made in India</span>
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.78);color:#145d67;font-size:0.88rem;font-weight:700;">Fresh crunch</span>
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.78);color:#145d67;font-size:0.88rem;font-weight:700;">Premium pouch</span>
+        </div>
+
+        <img src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez pack showcase" style="width:min(340px,80%);margin:28px auto 0;display:block;filter:drop-shadow(0 18px 28px rgba(117,84,23,0.18));">
+      </article>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="flavors">
+    <div class="container">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Our Products</span>
+          <h2 style="margin:16px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+            Current best seller and upcoming flavor drops.
+          </h2>
+        </div>
+        <p style="max-width:56ch;margin:0;color:#627983;line-height:1.8;">
+          Built in a premium card-based style with one flagship product and future launches positioned clearly.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;">
+        <article class="product-card" data-card-link="product.html" tabindex="0" role="link" aria-label="Open RudraBitez Royal Yellow Banana Chips details" style="display:flex;flex-direction:column;min-height:100%;background:#fff;border:1px solid rgba(20,93,103,0.18);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;cursor:pointer;">
+          <div style="min-height:280px;margin-bottom:10px;border-radius:24px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:
+          radial-gradient(circle at 20% 18%, rgba(20,93,103,0.12), transparent 18%),
+          linear-gradient(145deg, #f5fbfa, #ffe8da);">
+            <img src="assets/banana-mockup-page-1-transparent.png" alt="RudraBitez Royal Yellow Banana Chips pouch" style="width:min(250px,100%);">
+          </div>
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(20,93,103,0.08);color:#145d67;font-size:0.88rem;font-weight:700;width:max-content;">Best Seller</span>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">RudraBitez Royal Yellow Banana Chips</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Net Weight: 200g • Taste: Classic Salted</p>
+          <p style="margin:12px 0 0;color:#627983;line-height:1.8;">Perfect crunch with authentic taste, made from selected bananas.</p>
+          <div style="display:flex;align-items:baseline;gap:12px;margin-top:18px;">
+            <span style="font-size:2rem;font-weight:800;letter-spacing:-0.04em;color:#145d67;">₹249</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;">
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(20,93,103,0.08);color:#145d67;font-size:0.88rem;font-weight:700;">Premium pouch</span>
+            <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(20,93,103,0.08);color:#145d67;font-size:0.88rem;font-weight:700;">6 Months Shelf Life</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
+            <a href="product.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font-weight:800;color:#fff;background:linear-gradient(135deg,#ff6d57,#cb473b);box-shadow:0 16px 30px rgba(141,66,25,0.22);text-decoration:none;flex:1 1 180px;">View Product</a>
+            <a href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:#fff;border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;flex:1 1 180px;">Order on WhatsApp</a>
+          </div>
+        </article>
+
+        <article style="display:flex;flex-direction:column;min-height:100%;background:linear-gradient(180deg,#fffdf9,#fff6ef);border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:74px;height:74px;margin:4px auto 24px;border-radius:999px;display:grid;place-items:center;background:rgba(255,109,87,0.12);color:#ff6d57;font-size:2rem;font-weight:700;">+</div>
+          <strong style="display:block;margin:0 0 10px;text-align:center;color:#17313a;">Tomato Banana Chips</strong>
+          <p style="margin:0;text-align:center;color:#627983;font-weight:700;">Launching Soon</p>
+          <p style="margin-top:auto;padding-top:22px;color:#627983;line-height:1.8;">A tangy tomato-style flavor designed for customers who want a bolder twist on classic banana chips.</p>
+          <div style="margin-top:18px;">
+            <a href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20Please%20notify%20me%20when%20Tomato%20Banana%20Chips%20launch." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:#fff;border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;width:100%;">Notify Me</a>
+          </div>
+        </article>
+
+        <article style="display:flex;flex-direction:column;min-height:100%;background:linear-gradient(180deg,#fffdf9,#fff6ef);border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:74px;height:74px;margin:4px auto 24px;border-radius:999px;display:grid;place-items:center;background:rgba(255,109,87,0.12);color:#ff6d57;font-size:2rem;font-weight:700;">+</div>
+          <strong style="display:block;margin:0 0 10px;text-align:center;color:#17313a;">Peri Peri Banana Chips</strong>
+          <p style="margin:0;text-align:center;color:#627983;font-weight:700;">Launching Soon</p>
+          <p style="margin-top:auto;padding-top:22px;color:#627983;line-height:1.8;">A spicy peri peri version for snack lovers who enjoy more kick with the same crisp texture.</p>
+          <div style="margin-top:18px;">
+            <a href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20Please%20notify%20me%20when%20Peri%20Peri%20Banana%20Chips%20launch." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:#fff;border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;width:100%;">Notify Me</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYING FLOW -->
+  <section class="section" style="background:rgba(255,255,255,0.52);">
+    <div class="container">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Simple Buying Flow</span>
+          <h2 style="margin:16px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+            Three steps from discovery to direct order.
+          </h2>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;">
+        <article style="position:relative;overflow:hidden;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">1</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Explore the product gallery</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">See the front pack, back pack, and supporting visuals in one clean stage.</p>
+        </article>
+
+        <article style="position:relative;overflow:hidden;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">2</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Check quality details</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Understand price, shelf life, storage, and pack trust points before ordering.</p>
+        </article>
+
+        <article style="position:relative;overflow:hidden;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <div style="width:50px;height:50px;border-radius:18px;display:grid;place-items:center;background:rgba(20,93,103,0.12);color:#145d67;font-weight:800;">3</div>
+          <strong style="display:block;margin:16px 0 10px;color:#17313a;">Order directly</strong>
+          <p style="margin:0;color:#627983;line-height:1.8;">Move straight to WhatsApp for a quick brand-supported order experience.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" style="background:rgba(255,255,255,0.52);padding-top:10px;">
+    <div class="container">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(20,93,103,0.1);color:#145d67;font-size:0.92rem;font-weight:800;">✦ Customer Love</span>
+          <h2 style="margin:16px 0 0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;color:#17313a;">
+            Trust feels stronger when buyers can see proof.
+          </h2>
+        </div>
+        <p style="max-width:56ch;margin:0;color:#627983;line-height:1.8;">
+          Real-looking review blocks help the page feel more convincing and more conversion-ready.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;">
+        <article style="min-height:100%;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <span style="display:inline-block;margin-bottom:14px;color:#d06a17;letter-spacing:0.16em;font-weight:800;">★★★★★</span>
+          <p style="margin:0;color:#627983;line-height:1.8;">“Crunch fresh tha aur packaging premium lagi. WhatsApp order process bhi easy tha.”</p>
+          <strong style="display:block;margin:16px 0 4px;color:#17313a;">Neha P. • Lucknow</strong>
+          <span style="color:#145d67;font-size:0.88rem;font-weight:700;">Verified Buyer</span>
+        </article>
+
+        <article style="min-height:100%;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <span style="display:inline-block;margin-bottom:14px;color:#d06a17;letter-spacing:0.16em;font-weight:800;">★★★★★</span>
+          <p style="margin:0;color:#627983;line-height:1.8;">“Tea-time ke liye perfect hai. Back pack details dekhkar trust bana.”</p>
+          <strong style="display:block;margin:16px 0 4px;color:#17313a;">Rahul K. • Mumbai</strong>
+          <span style="color:#145d67;font-size:0.88rem;font-weight:700;">Verified Buyer</span>
+        </article>
+
+        <article style="min-height:100%;background:#fff;border:1px solid rgba(23,49,58,0.11);border-radius:28px;box-shadow:0 10px 26px rgba(74,57,24,0.06);padding:26px;">
+          <span style="display:inline-block;margin-bottom:14px;color:#d06a17;letter-spacing:0.16em;font-weight:800;">★★★★★</span>
+          <p style="margin:0;color:#627983;line-height:1.8;">“Product page clean hai aur images samajhne me easy hain. Gifting ke liye bhi achha laga.”</p>
+          <strong style="display:block;margin:16px 0 4px;color:#17313a;">Priya S. • Pune</strong>
+          <span style="color:#145d67;font-size:0.88rem;font-weight:700;">Verified Buyer</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY MINI BLOCK -->
+  <section class="section" style="padding-top:10px;">
+    <div class="container">
+      <div style="padding:34px;border-radius:36px;background:linear-gradient(145deg,#103d48 0%, #176872 34%, #ff7659 76%, #ffb56a 100%);box-shadow:0 24px 70px rgba(30,55,62,0.14);">
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fffaf0;font-size:0.92rem;font-weight:800;">✦ Crafted by Rudra Foods</span>
+        <h2 style="margin:18px 0 0;color:#fffaf0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;">
+          Traditional banana chips made for modern buyers.
+        </h2>
+        <p style="margin:14px 0 0;max-width:58ch;color:#fffaf0;line-height:1.8;">
+          RudraBitez is built around one simple idea: deliver familiar snack taste with cleaner packaging, stronger trust, and a direct brand-first order experience.
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;">
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fffaf0;font-size:0.88rem;font-weight:700;">Traditional taste</span>
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fffaf0;font-size:0.88rem;font-weight:700;">Premium presentation</span>
+          <span style="display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fffaf0;font-size:0.88rem;font-weight:700;">Direct support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="container">
+      <div style="padding:34px;border-radius:36px;background:linear-gradient(145deg,#103d48 0%, #176872 34%, #ff7659 76%, #ffb56a 100%);box-shadow:0 24px 70px rgba(30,55,62,0.14);">
+        <span style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fffaf0;font-size:0.92rem;font-weight:800;">✦ Ready To Order</span>
+        <h2 style="margin:18px 0 0;color:#fffaf0;font-size:clamp(1.95rem,4vw,3rem);line-height:0.98;letter-spacing:-0.05em;">
+          Ready to enjoy premium crunch with direct support?
+        </h2>
+        <p style="margin:14px 0 0;max-width:58ch;color:#fffaf0;line-height:1.8;">
+          Order now on WhatsApp, explore the detailed product page, or continue to checkout when you are ready.
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;">
+          <a href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20order%20Royal%20Yellow%20Banana%20Chips." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;border:0;background:linear-gradient(135deg,#1fa855,#118743);color:#fff;font-weight:800;box-shadow:0 14px 28px rgba(17,135,67,0.24);text-decoration:none;">
+            Order on WhatsApp
+          </a>
+          <a href="product.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:rgba(255,255,255,0.92);border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;">
+            View Product Details
+          </a>
+          <a href="checkout.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:rgba(255,255,255,0.92);border:1px solid rgba(32,50,38,0.12);color:#cb473b;font-weight:800;box-shadow:0 12px 24px rgba(140,92,37,0.08);text-decoration:none;">
+            Go to Checkout
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <footer class="footer footer-compact">
+      <div class="container footer-compact-wrap">
+        <div class="footer-rich-top">
+          <div class="footer-brand-block">
+            <a class="footer-brandmark" href="index.html#top">RudraBitez<sup>TM</sup></a>
+            <div class="footer-brand-copy">
+              <p>Premium Royal Yellow Banana Chips</p>
+              <p>Traditional taste with hygienic packaging</p>
+              <p>Crafted for gifting, direct orders, and retail confidence</p>
+              <p>Make every bite a crisp and memorable snack moment</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Explore Banana Chips</h3>
+            <nav class="footer-rich-list" aria-label="Explore banana chips">
+              <a href="product.html">Royal Yellow Chips</a>
+              <a href="products.html#flavors">Upcoming Flavors</a>
+              <a href="checkout.html">Buy Now</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Company</h3>
+            <nav class="footer-rich-list" aria-label="Company links">
+              <a href="index.html#about">Our Story</a>
+              <a href="product.html">Quality Promise</a>
+              <a href="index.html#contact">Get In Touch</a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="footer-col-title">Connect With Us</h3>
+            <div class="footer-contact-block">
+              <p>RudraBitez / Rudra Foods</p>
+              <p>Mumbai, India</p>
+              <p>Phone: <a href="tel:+918591858021">+91 8591858021</a></p>
+              <p>Email: <a href="mailto:info@rudrabitez.com">info@rudrabitez.com</a></p>
+            </div>
+            <div class="footer-social" aria-label="Social media links">
+              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp"><span class="footer-social-label">WA</span></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><span class="footer-social-label">f</span></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="footer-social-label">IG</span></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><span class="footer-social-label">YT</span></a>
+              <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><span class="footer-social-label">P</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-compact-bottom">
+          <p class="footer-compact-copy">© 2026 RudraBitez. All rights reserved.</p>
+          <nav class="footer-compact-links" aria-label="Footer links">
+            <a href="index.html#contact">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="shipping-returns.html">Shipping &amp; Returns</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 920px) {
+  .container,
+  .page-shell,
+  .section-shell,
+  .section-inner,
+  .hero-shell,
+  .checkout-shell,
+  .legal-shell,
+  .footer-shell,
+  .nav-shell,
+  .authplus-topbar,
+  .authplus-stage,
+  .authplus-footer {
+    width: min(100% - 24px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .site-header,
+  .navbar,
+  .main-header,
+  .header-shell,
+  .nav-inner,
+  .topbar,
+  .site-nav,
+  .checkout-header,
+  .footer-columns,
+  .footer-grid,
+  .hero-grid,
+  .hero-layout,
+  .content-grid,
+  .feature-grid,
+  .story-grid,
+  .quality-grid,
+  .gallery-grid,
+  .faq-grid,
+  .contact-grid,
+  .checkout-grid,
+  .checkout-layout,
+  .legal-grid,
+  .authplus-grid-two,
+  .product-grid,
+  .products-grid,
+  .benefit-grid,
+  .trust-grid,
+  .metric-grid {
+    grid-template-columns: 1fr !important;
+    flex-wrap: wrap !important;
+  }
+
+  .nav-links,
+  .menu-links,
+  .header-links,
+  .site-menu,
+  .desktop-nav,
+  .footer-links,
+  .footer-legal,
+  .authplus-nav {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .hero-pack-front,
+  .hero-pack-back,
+  .pack-front,
+  .pack-back,
+  .product-card img,
+  .product-image img,
+  .gallery-card img,
+  .gallery-item img,
+  .checkout-visual img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .hero-pack-front,
+  .hero-pack-back,
+  .pack-front,
+  .pack-back {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+
+  .floating-card,
+  .hero-note,
+  .hero-detail,
+  .detail-card,
+  .hero-badge-card,
+  .hero-float,
+  .authplus-floating {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+  }
+
+  .checkout-sidebar,
+  .order-summary,
+  .summary-card,
+  .sticky-card {
+    position: static !important;
+    top: auto !important;
+  }
+
+  .cta-row,
+  .button-row,
+  .buy-row,
+  .order-actions,
+  .payment-actions,
+  .authplus-top-actions,
+  .authplus-row {
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+  }
+
+  .cta-row > *,
+  .button-row > *,
+  .buy-row > *,
+  .order-actions > *,
+  .payment-actions > * {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  section,
+  .section,
+  .hero,
+  .products,
+  .gallery,
+  .contact,
+  .faq,
+  .quality,
+  .checkout-section,
+  .legal-section {
+    scroll-margin-top: 88px;
+  }
+
+  h1,
+  .hero h1,
+  .page-hero h1,
+  .checkout-title {
+    line-height: 1.02 !important;
+    word-break: break-word;
+  }
+
+  h2,
+  .section-title,
+  .authplus-panel-head h2 {
+    line-height: 1.08 !important;
+  }
+
+  .footer,
+  footer,
+  .site-footer,
+  .authplus-footer {
+    text-align: left;
+  }
+
+  .footer-columns,
+  .footer-grid,
+  .footer-links,
+  .footer-legal,
+  .footer-social,
+  .authplus-footer-links {
+    justify-content: flex-start !important;
+  }
+
+  .footer-social a,
+  .social-links a,
+  .social-icon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1rem !important;
+  }
+
+  .product-card,
+  .product-panel,
+  .gallery-card,
+  .faq-card,
+  .info-card,
+  .checkout-card,
+  .summary-card,
+  .authplus-panel,
+  .authplus-showcase {
+    border-radius: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .authplus-topbar,
+  .site-header,
+  .navbar,
+  .main-header,
+  .header-shell,
+  .topbar {
+    border-radius: 20px !important;
+  }
+
+  .nav-links,
+  .menu-links,
+  .header-links,
+  .site-menu,
+  .authplus-nav {
+    gap: 10px !important;
+  }
+
+  .cta-row > *,
+  .button-row > *,
+  .buy-row > *,
+  .order-actions > *,
+  .payment-actions > *,
+  .authplus-submit,
+  .authplus-mini-button {
+    width: 100% !important;
+  }
+
+  .authplus-pack-frame,
+  .hero-pack-front,
+  .hero-pack-back,
+  .pack-front,
+  .pack-back {
+    width: min(88%, 300px) !important;
+  }
+
+  .footer-social a,
+  .social-links a,
+  .social-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
