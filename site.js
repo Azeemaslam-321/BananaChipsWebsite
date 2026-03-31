@@ -39,6 +39,15 @@ document.querySelectorAll(".nav").forEach((nav) => {
   })
 })
 
+document.querySelectorAll(".site-header").forEach((header) => {
+  const syncScrolledState = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 12)
+  }
+
+  syncScrolledState()
+  window.addEventListener("scroll", syncScrolledState, { passive: true })
+})
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-hero-slider]").forEach((slider) => {
     const slides = Array.from(slider.querySelectorAll("[data-hero-slide]"));

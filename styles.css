@@ -20,6 +20,8 @@
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 16px;
+  --header-offset: 108px;
+  --header-offset-mobile: 92px;
   /* Paste your final logo URL/path in the variable below */
   --brand-logo-url: url("assets/rudrabitez-lockup.svg");
   --brand-logo-width: clamp(300px, 21vw, 400px);
@@ -73,6 +75,7 @@ textarea {
 
 .page-shell {
   min-height: 100vh;
+  padding-top: var(--header-offset);
 }
 
 .container {
@@ -81,13 +84,23 @@ textarea {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 20;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   background: var(--nav-surface);
   backdrop-filter: none;
   border-bottom: 1px solid rgba(32, 50, 38, 0.08);
   box-shadow: 0 10px 26px rgba(23, 49, 58, 0.04);
+  transition: box-shadow 0.24s ease, background 0.24s ease, border-color 0.24s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(23, 49, 58, 0.1);
+  box-shadow: 0 16px 32px rgba(23, 49, 58, 0.08);
 }
 
 .nav {
@@ -2709,8 +2722,11 @@ th {
 }
 
 @media (max-width: 760px) {
+  .page-shell {
+    padding-top: var(--header-offset-mobile);
+  }
+
   .site-header {
-    position: sticky;
     top: 0;
   }
 
