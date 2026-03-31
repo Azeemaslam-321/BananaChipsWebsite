@@ -20,8 +20,8 @@
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 16px;
-  --header-offset: 108px;
-  --header-offset-mobile: 92px;
+  --header-offset: 90px;
+  --header-offset-mobile: 84px;
   /* Paste your final logo URL/path in the variable below */
   --brand-logo-url: url("assets/rudrabitez-lockup.svg");
   --brand-logo-width: clamp(300px, 21vw, 400px);
@@ -108,7 +108,7 @@ textarea {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
-  padding: 16px 0;
+  padding: 10px 0;
 }
 
 .nav-toggle {
