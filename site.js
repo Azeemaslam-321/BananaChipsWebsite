@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       stopAutoplay();
       autoPlay = setInterval(() => {
         showSlide(currentIndex + 1);
-      }, 3000);
+      }, 5200);
     }
 
     function stopAutoplay() {
@@ -157,7 +157,7 @@ document.querySelectorAll("[data-hero-slider]").forEach((slider) => {
     stopAutoplay()
     autoplayId = window.setInterval(() => {
       setActive(activeIndex + 1)
-    }, 4200)
+    }, 5600)
   }
 
   prev?.addEventListener("click", () => {

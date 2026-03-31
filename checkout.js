@@ -49,7 +49,6 @@ if (checkoutForm) {
     bulk: { label: "Bulk enquiry", packs: 0 },
   }
   const paymentLabels = {
-    online: "Pay Online",
     cod: "Cash on Delivery",
     whatsapp: "WhatsApp Assistance",
   }
@@ -192,10 +191,6 @@ if (checkoutForm) {
       return "Request Bulk Quote"
     }
 
-    if (paymentMode === "online") {
-      return `Pay ${formatCurrency(quantityMeta.packs * unitPrice)} Securely`
-    }
-
     if (paymentMode === "cod") {
       return "Confirm Cash on Delivery"
     }
@@ -249,14 +244,6 @@ if (checkoutForm) {
     const targetUrl = buildWhatsAppUrl(values, paymentMode, quantityMeta)
 
     window.open(targetUrl, "_blank", "noopener")
-  }
-
-  const parseJsonResponse = async (response) => {
-    try {
-      return await response.json()
-    } catch (error) {
-      return {}
-    }
   }
 
   const validateField = (name) => {
@@ -344,118 +331,6 @@ if (checkoutForm) {
 
   const clearAllFieldErrors = () => {
     fieldOrder.forEach((name) => setFieldError(name, ""))
-  }
-
-  const createRazorpayOrder = async (values) => {
-    const response = await fetch("razorpay-order.php", {
-      method: "POST",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-
-    const data = await parseJsonResponse(response)
-
-    if (!response.ok || !data.success) {
-      throw new Error(data.message || "Unable to create Razorpay order right now.")
-    }
-
-    return data
-  }
-
-  const verifyRazorpayPayment = async (paymentResponse, values) => {
-    const response = await fetch("razorpay-verify.php", {
-      method: "POST",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...values,
-        razorpay_order_id: paymentResponse.razorpay_order_id,
-        razorpay_payment_id: paymentResponse.razorpay_payment_id,
-        razorpay_signature: paymentResponse.razorpay_signature,
-      }),
-    })
-
-    const data = await parseJsonResponse(response)
-
-    if (!response.ok || !data.success) {
-      throw new Error(data.message || "Payment verification failed. Please contact support.")
-    }
-
-    return data
-  }
-
-  const launchRazorpayCheckout = async () => {
-    const values = getFormValues()
-    const quantityMeta = getQuantityMeta()
-
-    if (!quantityMeta.packs) {
-      setStatus("warning", "Bulk enquiries are routed through WhatsApp so the team can share a custom quote.")
-      openWhatsAppCheckout("whatsapp")
-      return
-    }
-
-    if (typeof window.Razorpay !== "function") {
-      throw new Error("Razorpay checkout could not load. Please refresh the page or try again on PHP hosting.")
-    }
-
-    setLoading(true, "Preparing secure payment...")
-    const order = await createRazorpayOrder(values)
-    setLoading(false)
-    setStatus("loading", "Razorpay checkout is opening. Complete the payment securely in the next step.")
-
-    const paymentObject = new window.Razorpay({
-      key: order.key_id,
-      amount: order.amount,
-      currency: order.currency,
-      name: order.business_name,
-      description: order.description,
-      order_id: order.order_id,
-      image: new URL("assets/rudrabitez-lockup.svg", window.location.href).href,
-      prefill: {
-        name: order.prefill?.name || getFullName(values),
-        email: order.prefill?.email || values.email,
-        contact: order.prefill?.contact || values.phone,
-      },
-      notes: order.notes || {},
-      theme: {
-        color: order.theme_color || "#145d67",
-      },
-      handler: async (paymentResponse) => {
-        setLoading(true, "Verifying payment...")
-
-        try {
-          const verification = await verifyRazorpayPayment(paymentResponse, values)
-          checkoutForm.reset()
-          clearAllFieldErrors()
-          updateSummary()
-          setStatus("success", verification.message || "Payment verified successfully. Your RudraBitez order is confirmed.")
-          window.scrollTo({ top: 0, behavior: "smooth" })
-        } catch (error) {
-          setStatus("error", error.message)
-        } finally {
-          setLoading(false)
-        }
-      },
-      modal: {
-        ondismiss: () => {
-          setStatus("warning", "Payment window was closed before completion. You can try again or continue on WhatsApp.")
-          setLoading(false)
-        },
-      },
-    })
-
-    paymentObject.on("payment.failed", (event) => {
-      const description = event.error?.description || "Please try again or use another payment method."
-      setStatus("error", `Payment failed. ${description}`)
-      setLoading(false)
-    })
-
-    paymentObject.open()
   }
 
   const applyInputFormatting = (target) => {
@@ -573,17 +448,15 @@ if (checkoutForm) {
       return
     }
 
-    try {
-      await launchRazorpayCheckout()
-    } catch (error) {
-      setLoading(false)
-      setStatus("error", error.message)
+    if (!getQuantityMeta().packs) {
+      setStatus("warning", "Bulk enquiries are being shared on WhatsApp so the team can prepare a custom quote.")
+      openWhatsAppCheckout(paymentMode || "whatsapp")
+      return
     }
+
+    setStatus("warning", "Your order details are being shared on WhatsApp for quick confirmation from the RudraBitez team.")
+    openWhatsAppCheckout(paymentMode || "cod")
   })
 
   updateSummary()
-
-  if (window.location.hostname.includes("github.io")) {
-    setStatus("warning", "This demo is running on GitHub Pages. Live Razorpay order creation needs PHP hosting such as Hostinger.")
-  }
 }

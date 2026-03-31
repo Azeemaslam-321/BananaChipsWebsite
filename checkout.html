@@ -7,7 +7,6 @@
   <meta name="description" content="Checkout for RudraBitez Royal Yellow Banana Chips.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="mobile-fixes.css">
-  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
   <script src="site.js" defer></script>
   <script src="checkout.js" defer></script>
 </head>
@@ -59,7 +58,7 @@
             <span class="eyebrow">Checkout</span>
             <h1 style="margin-top:16px; font-size:clamp(2.4rem, 5vw, 4rem);">Finish your order with a cleaner, faster checkout.</h1>
           </div>
-          <p>Enter delivery details, review your pack quantity, and pay securely through Razorpay or confirm your order with WhatsApp support.</p>
+          <p>Enter delivery details, review your pack quantity, and confirm your order through WhatsApp or Cash on Delivery support.</p>
         </div>
 
         <div id="checkout-status" class="checkout-status" hidden aria-live="polite"></div>
@@ -88,8 +87,8 @@
 
             <div class="secure-strip">
               <div class="secure-strip-item">
-                <strong>Gateway</strong>
-                <span>Razorpay Standard Checkout</span>
+                <strong>Order mode</strong>
+                <span>WhatsApp and COD support</span>
               </div>
               <div class="secure-strip-item">
                 <strong>Support</strong>
@@ -112,7 +111,7 @@
               </div>
               <div class="summary-row">
                 <span>Payment mode</span>
-                <strong id="summary-payment-mode">Pay Online</strong>
+                <strong id="summary-payment-mode">Cash on Delivery</strong>
               </div>
               <div class="summary-row summary-row-total">
                 <span>Total payable</span>
@@ -145,7 +144,7 @@
             <div class="checkout-card-head">
               <span class="eyebrow">Delivery & Payment</span>
               <h2 style="margin-top:16px;">Professional order details</h2>
-              <p class="checkout-copy">This form is ready for Razorpay online payments on PHP hosting and keeps Cash on Delivery or assisted WhatsApp ordering available as backup options.</p>
+              <p class="checkout-copy">This form is now streamlined for Cash on Delivery and assisted WhatsApp ordering, while keeping your order details fully validated and ready to share.</p>
             </div>
 
             <form id="checkout-form" class="form-grid checkout-form" data-unit-price="249" novalidate>
@@ -186,7 +185,7 @@
                   <span class="form-step">02</span>
                   <div>
                     <h3>Delivery address</h3>
-                    <p>Keep the address complete so the same details can be reused for payment verification or WhatsApp order confirmation.</p>
+                    <p>Keep the address complete so the same details can be reused for dispatch confirmation or WhatsApp order support.</p>
                   </div>
                 </div>
 
@@ -243,26 +242,18 @@
                   <span class="form-step">04</span>
                   <div>
                     <h3>Choose payment mode</h3>
-                    <p>Pay online with Razorpay, confirm a COD request, or switch to assisted WhatsApp checkout.</p>
+                    <p>Choose Cash on Delivery or continue your order with direct WhatsApp support from the RudraBitez team.</p>
                   </div>
                 </div>
 
                 <div class="payment-choice-list">
                   <label class="payment-option">
-                    <input type="radio" name="payment_mode" value="online" checked>
-                    <span class="payment-option-copy">
-                      <strong>Pay Online</strong>
-                      <small>UPI, cards, netbanking and wallets using Razorpay.</small>
-                    </span>
-                    <span class="payment-badge">Recommended</span>
-                  </label>
-
-                  <label class="payment-option">
-                    <input type="radio" name="payment_mode" value="cod">
+                    <input type="radio" name="payment_mode" value="cod" checked>
                     <span class="payment-option-copy">
                       <strong>Cash on Delivery</strong>
                       <small>Share the order details first and confirm delivery support manually.</small>
                     </span>
+                    <span class="payment-badge">Recommended</span>
                   </label>
 
                   <label class="payment-option">
@@ -283,16 +274,16 @@
               <div class="field-error group-error" data-error-for="consent" aria-live="polite"></div>
 
               <div class="checkout-actions">
-                <button class="button" id="checkout-submit" type="submit">Pay Rs. 249 Securely</button>
+                <button class="button" id="checkout-submit" type="submit">Confirm Cash on Delivery</button>
                 <a class="button-outline" id="whatsapp-checkout" href="https://wa.me/918591858021?text=Hi%20RudraBitez%2C%20I%20want%20to%20complete%20my%20banana%20chips%20checkout." target="_blank" rel="noreferrer">Order on WhatsApp</a>
               </div>
 
-              <p class="checkout-disclaimer">Razorpay opens in a secure checkout modal. Cash on Delivery and bulk enquiry requests are routed through WhatsApp with your filled order summary.</p>
+              <p class="checkout-disclaimer">Cash on Delivery and bulk enquiry requests are routed through WhatsApp with your filled order summary, so the RudraBitez team can confirm dispatch quickly.</p>
             </form>
 
             <div class="checkout-mini-note">
-              <strong>Accepted online payment methods</strong>
-              <span>UPI, cards, netbanking and supported wallets through Razorpay Standard Checkout.</span>
+              <strong>Order support note</strong>
+              <span>Use this page to validate your details, then continue with WhatsApp or COD confirmation from the RudraBitez team.</span>
             </div>
           </section>
         </div>
