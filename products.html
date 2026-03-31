@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="mobile-fixes.css">
   <script src="site.js" defer></script>
-  <style>
+<style>
 @media (max-width: 992px) {
   .products-hero .container,
   main .container[style*="grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr)"],
@@ -21,11 +21,148 @@
     display: grid !important;
     grid-template-columns: 1fr !important;
   }
+
+   .products-hero .container,
+   main .container[style*="grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr)"] {
+    gap: 22px !important;
+   }
+
+  main article[style*="padding:26px;border-radius:28px"] {
+    padding: 22px !important;
+    border-radius: 24px !important;
+  }
+
+  main div[style*="min-height:560px;padding:34px"] {
+    min-height: 460px !important;
+    padding: 24px !important;
+  }
+
+  main img[style*="width:min(100%,460px);max-height:500px"] {
+    width: min(100%, 390px) !important;
+    max-height: 430px !important;
+  }
+
+  main div[style*="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  main div[style*="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;"] > * {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  main div[style*="display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(31,51,62,0.08);"] {
+    flex-direction: column !important;
+    gap: 6px !important;
+    align-items: flex-start !important;
+  }
+
+  main div[style*="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;"] {
+    align-items: flex-start !important;
+  }
 }
 
 @media (max-width: 768px) {
+  .products-hero {
+    padding-top: 20px !important;
+  }
+
+  main .section {
+    padding: 56px 0 !important;
+  }
+
+  main article[style*="padding:26px;border-radius:28px"] {
+    padding: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  main div[style*="min-height:560px;padding:34px"] {
+    min-height: 360px !important;
+    padding: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  main img[style*="width:min(100%,460px);max-height:500px"] {
+    width: min(100%, 300px) !important;
+    max-height: 320px !important;
+  }
+
+  main div[style*="grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px;"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+  }
+
   .product-thumb-button img {
-    height: 72px !important;
+    height: 68px !important;
+  }
+
+  main div[style*="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  main div[style*="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;"] > * {
+    width: 100% !important;
+  }
+
+  main h1[style*="font-size:clamp(2.1rem,5vw,3.25rem)"] {
+    font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  main p[style*="font-size:1.06rem;line-height:1.75;color:#4b6474;margin-top:16px;max-width:620px;"] {
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+  }
+
+  main div[style*="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px;"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  main div[style*="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;"] {
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  main .container {
+    width: min(100% - 24px, 1120px) !important;
+  }
+
+  main article[style*="padding:26px;border-radius:28px"] {
+    padding: 16px !important;
+    border-radius: 20px !important;
+  }
+
+  main div[style*="min-height:560px;padding:34px"] {
+    min-height: 310px !important;
+    padding: 14px !important;
+  }
+
+  main img[style*="width:min(100%,460px);max-height:500px"] {
+    width: min(100%, 250px) !important;
+    max-height: 270px !important;
+  }
+
+  main div[style*="grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px;"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .product-thumb-button img {
+    height: 58px !important;
+  }
+
+  main div[style*="display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(31,51,62,0.08);"] {
+    padding: 12px 0 !important;
+  }
+
+  main h2[style*="font-size:clamp(1.9rem,4vw,2.7rem)"] {
+    font-size: clamp(1.55rem, 7vw, 2rem) !important;
   }
 }
 </style>
@@ -105,12 +242,12 @@ linear-gradient(180deg, #fffdf8 0%, #fff6ef 100%);">
             <img src="assets/banana-mockup-page-2-transparent.png" alt="Back pack thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
           </button>
 
-          <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-1.png" data-gallery-alt="RudraBitez product lifestyle shot" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
-            <img src="assets/banana-mockup-page-1.png" alt="Lifestyle thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+         <button class="product-thumb-button is-active" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-1-transparent.png" data-gallery-alt="RudraBitez Royal Yellow Banana Chips front pack" style="padding:10px;border:1px solid rgba(23,49,58,0.16);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-1-transparent.png" alt="Front pack thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
           </button>
 
-          <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-2.png" data-gallery-alt="RudraBitez product back artwork" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
-            <img src="assets/banana-mockup-page-2.png" alt="Artwork thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
+           <button class="product-thumb-button" type="button" data-gallery-thumb data-gallery-src="assets/banana-mockup-page-2-transparent.png" data-gallery-alt="RudraBitez Royal Yellow Banana Chips back pack" style="padding:10px;border:1px solid rgba(23,49,58,0.10);border-radius:18px;background:#fff;box-shadow:0 12px 24px rgba(23,49,58,0.06);cursor:pointer;">
+            <img src="assets/banana-mockup-page-2-transparent.png" alt="Back pack thumbnail" style="width:100%;height:94px;object-fit:contain;display:block;">
           </button>
         </div>
 
@@ -509,11 +646,18 @@ linear-gradient(180deg, #fffdf8 0%, #fff6ef 100%);">
               <p>Email: <a href="mailto:info@rudrabitez.com">info@rudrabitez.com</a></p>
             </div>
             <div class="footer-social" aria-label="Social media links">
-              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp"><span class="footer-social-label">WA</span></a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><span class="footer-social-label">f</span></a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="footer-social-label">IG</span></a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube"><span class="footer-social-label">YT</span></a>
-              <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><span class="footer-social-label">P</span></a>
+              <a href="https://wa.me/918591858021" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path></svg>
+              </a>
+              <a href="mailto:info@rudrabitez.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"></path><path d="m4 8 8 6 8-6"></path></svg>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2m0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25zm8.88 1.12a1.13 1.13 0 1 1 0 2.26 1.13 1.13 0 0 1 0-2.26M12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5m0 1.5A4 4 0 1 0 16 12a4 4 0 0 0-4-4"></path></svg>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078V12.07h3.047V9.413c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.926-1.956 1.874v2.264h3.328l-.532 3.471h-2.796v8.385C19.612 23.027 24 18.062 24 12.073"></path></svg>
+              </a>
             </div>
           </div>
         </div>
