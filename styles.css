@@ -22,20 +22,14 @@
   --radius-sm: 16px;
   --header-offset: 90px;
   --header-offset-mobile: 84px;
-  /* Paste your final logo URL/path in the variable below */
-  --brand-logo-url: url("assets/rudrabitez-lockup.svg");
-  --brand-logo-width: clamp(300px, 21vw, 400px);
-  --brand-logo-height: 82px;
-  --brand-logo-fit: contain;
-  --brand-logo-mobile-width: 178px;
-  --brand-logo-mobile-height: 46px;
-  --brand-logo-mobile-fit: contain;
+  --brand-logo-width: clamp(300px, 20vw, 380px);
+  --brand-logo-height: 72px;
+  --brand-logo-mobile-width: 205px;
+  --brand-logo-mobile-height: 50px;
   --footer-logo-width: clamp(300px, 22vw, 420px);
   --footer-logo-height: 104px;
-  --footer-logo-fit: contain;
   --footer-logo-mobile-width: 230px;
   --footer-logo-mobile-height: 68px;
-  --footer-logo-mobile-fit: contain;
 }
 
 * {
@@ -148,25 +142,24 @@ textarea {
 }
 
 .brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: var(--brand-logo-width);
   min-width: 0;
   height: var(--brand-logo-height);
   flex: 0 0 auto;
-  background-image: var(--brand-logo-url);
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: var(--brand-logo-fit);
   vertical-align: middle;
   overflow: hidden;
 }
 
-.brand-mark {
-  display: none !important;
-}
-
-.brand-name {
-  display: none !important;
+.brand-logo-image {
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    transform: scale(2.80);
+    transform-origin: left center;
 }
 
 .nav-links,
@@ -1410,24 +1403,21 @@ th {
 }
 
 .footer-brandmark {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   width: var(--footer-logo-width);
   height: var(--footer-logo-height);
-  background-image: var(--brand-logo-url);
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: var(--footer-logo-fit);
   text-decoration: none;
-  color: transparent;
-  font-size: 0;
-  line-height: 0;
   overflow: hidden;
-  white-space: nowrap;
-  text-indent: -9999px;
 }
 
-.footer-brandmark sup {
-  display: none;
+.footer-brand-logo-image {
+   width: 18vw;        /* screen ke hisaab se adjust */
+    max-width: 260px;   /* max limit */
+    min-width: 160px;   /* chhote screen pe bhi visible */
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .footer-brand-copy {
@@ -2760,8 +2750,6 @@ th {
     height: var(--brand-logo-mobile-height);
     min-width: 0;
     justify-self: center;
-    background-position: center center;
-    background-size: var(--brand-logo-mobile-fit);
   }
 
   .hero {
@@ -3613,7 +3601,6 @@ th {
   .footer-brandmark {
     width: min(100%, var(--footer-logo-mobile-width));
     height: var(--footer-logo-mobile-height);
-    background-size: var(--footer-logo-mobile-fit);
   }
 
   .footer-social {
