@@ -28,8 +28,8 @@
   --brand-logo-mobile-height: 50px;
   --footer-logo-width: clamp(300px, 22vw, 420px);
   --footer-logo-height: 104px;
-  --footer-logo-mobile-width: 230px;
-  --footer-logo-mobile-height: 68px;
+  --footer-logo-mobile-width: 268px;
+  --footer-logo-mobile-height: 78px;
 }
 
 * {
@@ -1412,9 +1412,9 @@ th {
 }
 
 .footer-brand-logo-image {
-   width: 18vw;        /* screen ke hisaab se adjust */
-    max-width: 260px;   /* max limit */
-    min-width: 160px;   /* chhote screen pe bhi visible */
+    width: 24vw;
+    max-width: 265px;
+    min-width: 214px;
     height: auto;
     object-fit: contain;
     object-position: left center;
@@ -3601,6 +3601,12 @@ th {
   .footer-brandmark {
     width: min(100%, var(--footer-logo-mobile-width));
     height: var(--footer-logo-mobile-height);
+  }
+
+  .footer-brand-logo-image {
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
   }
 
   .footer-social {
