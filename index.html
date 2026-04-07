@@ -33,6 +33,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.rudrabitez.com/#organization",
     "name": "RudraBitez",
     "url": "https://www.rudrabitez.com/",
     "logo": "https://www.rudrabitez.com/assets/IMG_0197.PNG",
@@ -55,9 +56,19 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://www.rudrabitez.com/#website",
     "name": "RudraBitez",
     "alternateName": "RudraBitez",
-    "url": "https://www.rudrabitez.com/"
+    "url": "https://www.rudrabitez.com/",
+    "inLanguage": "en-IN",
+    "publisher": {
+      "@id": "https://www.rudrabitez.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.rudrabitez.com/products.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
   <style>
